@@ -1,0 +1,241 @@
+0. Установка на debian \ ubuntu
+
+    sudo apt update && sudo apt upgrade - обновить список пакетов и обновить установленные пакеты
+    sudo apt install git - установка
+    git --version - посмотреть версию
+
+0.1 Установка на redhat \ centos
+
+    sudo yum update - обновить установленные пакеты
+    sudo yum install git - установка
+    git --version - посмотреть версию
+
+0.2 Установка на windows
+
+    https://git-scm.com/download/win - скачиваем и устанавливаем...
+
+1. Конфигурация .gitconfig
+
+    git config --global user.name "Evgeny Yakovlev" - задаем имя пользователя
+    git config --global user.email "git@b14esh.com" - задаем электронную почту (правильную почту указывать не обязательно)
+    git config -l - посмотреть что там настроили
+    cat ~/.gitconfig - посмотреть что там настроили 
+    !!! В windows так же файл  .gitconfig  находится в профиле пользователя
+
+1.1 Не обязательно \ Параметры установки окончаний строк \ Установка отображения unicode
+
+    Параметры установки окончаний строк Unix/Mac:
+    git config --global core.autocrlf input
+    git config --global core.safecrlf warn
+    
+    Параметры установки окончаний строк  Windows:
+    git config --global core.autocrlf true
+    git config --global core.safecrlf warn
+    
+    Установка отображения unicode
+    По умолчанию, git будет печатать не-ASCII символов в именах файлов в виде восьмеричных последовательностей \nnn. 
+    Что бы избежать нечитаемых строк, установите соответствующий флаги:
+    git config --global core.quotepath off
+
+2. Git работа с Local Repository / локальным репозиторием
+
+    mkdir myproject - создадим директорию
+    git init /home/user_name/myproject - создать локальный репозиторий /home/user_name/myproject
+    git init . - создать локальный репозиторий в текущем каталоге
+    
+    .git - каталог, который будет создан при выполнении команды (git init .), некая база данных git
+    
+    git status - покажет состояние репозитория (очень частая команда)
+    
+    git add . - подготовили файлы к созданию снимка
+    git add * - подготовили файлы к созданию снимка
+    git add file_name - подготовили файл созданию снимка
+    
+    git commit -m "My first commit " - создать снимок из подготовленных файлов 
+    
+    git status - покажет состояние репозитория (очень частая команда)
+
+3. Логи \ история изменений
+
+    git status - покажет состояние репозитория (очень частая команда)
+    git log - посмотреть историю изменений
+    git log -1 - посмотреть последний commit
+    git log -1 p - посмотреть изменение в последнем commit
+    git log -2 p - посмотреть изменение в последнем и предпоследнем commit
+    
+    git log ID -p - посмотреть изменения в commit с ID
+    git log 62d232e98a5aa10aa13aee7e1f0cc1978c5d94e1 -p 
+        - посмотреть изменения в commit с 62d232e98a5aa10aa13aee7e1f0cc1978c5d94e1
+
+3.1 Восстановление файлов
+
+    echo GADOSTI >> filename.txt - нагадили в файл 
+    cat - filename.txt - посмотреть файл
+    git status - посмотрели состояние git
+    git checkout -- filename.txt - отменить изменения в файле filename.txt (последний commit)
+    
+    git diff --staged - показывает разницу между commit (+/- был, будет)
+
+3.2 Игнорирование файлов \ .gitignore
+
+    echo "Super Log file" > sfile.log - создали файл sfile.log с содержимым "Super Log file"
+    mkdir log - создать папку log
+    
+    nano .gitignore - создаем файл .gitignore со следующим содержимым
+    ---------------
+    *.log
+    log/
+    filename.txt
+    ---------------
+
+4. Загрузка проекта на GitHub HTTPS
+
+    mkdir myproject - создали каталог myproject
+    cd  myproject - перешли в каталог myproject
+    git clone https://github.com/b14esh/myproject.git - загрузка проекта с github
+    
+    cd myproject - перешли в каталог myproject
+    ls - посмотрели содержимое 
+    echo "Hello world" > first_file.txt - создали пустой файл
+    
+    git add . - подготовили файлы к созданию снимка (добавили статус stagid)
+    git commit -m "My First commit" - создали снимок из подготовленных файлов (локальный репозиторий)
+    git push origin - отправили изменения на удаленный репозиторий
+
+5. Создание и работа с ветвями (Branch) git
+
+    Обычно ветку master не изменяют.
+    Создают копию master, например ветку fix_error, выполняют исправления в новой ветке fix_error.
+    Когда в ветке fix_error все работает ее мигрируют в master.
+    
+    git init myapp - создали новый локальный репазиторий myapp
+    cd myapp - перешли каталог myapp
+    git status - посмотрели состояние git
+    
+    git branch - посмотреть ветки (в пустом репозитории команда ничего не покажет)
+    
+    echo "ver1" > index.html - создали файл index.html с содержимым ver1
+    git add .  - подготовили файлы к созданию снимка
+    git commit -m "version1.0"  - создал снимок из подготовленных файлов (локальный репозиторий)
+    git branch - посмотреть ветки
+    
+    echo "ver2" > index.html - изменили файл index.html с содержимым ver2
+    git add .  - подготовили файлы к созданию снимка
+    git commit -m "version2.0"  - создал снимок из подготовленных файлов (локальный репозиторий)
+    
+    
+    echo "ver3" > index.html - изменили файл index.html с содержимым ver3
+    git add .  - подготовили файлы к созданию снимка
+    git commit -m "version3.0"  - создал снимок из подготовленных файлов (локальный репозиторий)
+    
+    git branch fix_error - создать ветку  fix_error
+    git checkout fix_error - выполнить переход на ветку fix_error
+    git branch - посмотреть ветки, убедится что переход на ветку fix_error был выполнен
+    git status - посмотрели состояние git, убедится что переход на ветку fix_error был выполнен
+    
+    git checkout master - переключится на ветку мастер
+    git branch -d fix_error - удалить ветку fix_error
+    
+    git checkout -b fix_error - создать ветку fix_error, переход будет выполнен сразу в ветку fix_error
+    
+    echo "ver4" > index.html - изменили файл index.html с содержимым ver4
+    git add .  - подготовили файлы к созданию снимка
+    git commit -m "version4.0"  - создал снимок из подготовленных файлов (локальный репозиторий)
+    git log  - посмотреть историю изменений
+
+5.1 Git миграция ветки fix_error в master
+
+    git branch - посмотрели какие у нас ветки
+    git checkout master - перешли в ветку мастер
+    git status - посмотрели состояние git, убедится что переход на ветку master был выполнен
+    git merge fix_error - выполнили слияние веток master с fix_error 
+    git branch -d fix_error - удаляем ветку fix_eror
+
+5.2 Git удаление не нужной ветки test
+
+        git checkout -b test - создали ветку test и перешли в нее
+        echo "test 1111" > index.html - создали файл index.html с содержимым "test 1111"
+        git add .  - подготовили файлы к созданию снимка
+        git commit -m "test"  - создал снимок из подготовленных файлов (локальный репозиторий)
+        git checkout master - перешли в ветку мастер
+        git branch -d test - решили прибить ветку не нужна.... 
+                (windows удалила, а вот на linux ошибка error: 
+                The branch 'test' is not fully merged, просит -D)
+        git branch -D test - удалили ветку
+
+5.2 Git создали ветку add_link, изменили, сделали слияние и удалили ветку add_link
+
+    git checkout -b add_link - создали ветку add_link и перешли в нее
+ 
+    echo "ver4.1" > index.html - изменили файл
+    git add . - подготовили файлы к созданию снимка
+    git commit -m "version 4.1" - создал снимок из подготовленных файлов (локальный репозиторий)
+    git status - посмотрели состояние git
+    git log - посмотреть историю изменений
+    
+    echo "ver5" > index.html
+    git add .  - подготовили файлы к созданию снимка
+    git commit -m "version 5.0" - создал снимок из подготовленных файлов (локальный репозиторий)
+    git log - посмотреть историю изменений
+    
+    git checkout master
+    git merge add_link
+    git status - посмотрели состояние git
+    git log - посмотреть историю изменений
+    
+    git branch -d add_link - удалили ветку
+
+6. Git возврат на предыдущие версии
+
+    git log - посмотреть историю изменений
+    git checkout ID_commit - перейти на ID_commit
+    git checkout 949589d98963f657928b4f1e4e2bf2e60a6a0065 - перейти на ID_commit 949589d98963f657928b4f1e4e2bf2e60a6a0065
+    git log - посмотреть историю изменений
+    git checkout master - перешли обратно в ветку мастер
+
+6.1 Git изменить commit не создавая новый commit (не применять к публичным репозиториям)
+
+    git status - посмотрели состояние git
+    git log - посмотреть историю изменений
+    
+    echo "version 5.0" > index.html - изменили файл index.html
+    git commit --amend - изменили последний commit
+    
+    git log - посмотреть историю изменений
+
+7. Git полный возврат на commit
+
+    !!! внимание, будет удаленно все
+    git status - посмотрели состояние git
+    git log - посмотреть историю изменений
+    
+    !!! git reset --hard HEAD~ - полный возврат  на один commit (верхний comit будет удален)
+    !!! git reset --hard HEAD~2 - полный возврат на два commit ( два верхних comit будут удалены)
+
+8. Git полный рабочий цикл действий git + github
+
+    0. git clone git@github.com:b14esh/myproject.git - клонируем репозиторий
+    1. cd myproject/ - перешли в каталог myproject
+    2. git branch  - показать ветви
+    3. git checkout -b evgeny_task001 - создаем новую ветвь evgeny_task001 для работы
+    4. nano x7.txt - начинаем работать над файлом
+    5. git status - посмотрели состояние git
+    6. git add . - подготовили файлы к созданию снимка
+    7. git commit -m "test checkout branch"
+    8. git status - посмотрели состояние git
+    9. git log - посмотреть историю изменений
+    10. git push origin - пытаемся залить на сервер github исправления в файле,
+                                        получаем ошибку что нет такой ветки evgeny_task001,
+                                        и команду для создания ветви
+    11. git push --set-upstream origin evgeny_task001 - выполняем команду для
+                                        загрузки на github и создания ветви evgeny_task001
+    12. Идем на github, нужно бы наши исправления добавить в мастер,
+                                        запрашиваем выполнить merge 
+                                        жмем на кнопку "Compare & Pull Request". 
+    13. Собственно там будет выполнен "Merge pull request".
+    14.  git checkout master - переходим в мастер ветку
+    15.  git push origin --delete evgeny_task001 - работу по таску мы сделали,
+                                        можно удалять нашу ветку evgeny_task001
+
+9. git pull обновить репозиторий у себя с github
+    git pull - обновить репозиторий проекта у себя 
