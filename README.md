@@ -1,7 +1,7 @@
 <details>
 <summary><h2>Git Basics</h2></summary>
   <details>
-  <summary><h3>My comments</h3></summary>
+  <summary><h3>My impressions О_о</h3></summary>
     <options>
       <ul><h3>Introduction to Git and GitHub</h3>
         <ul><h5>New to me</h5>
@@ -21,6 +21,7 @@
   </details>
   <details>
   <summary><h3>Screenshots of the walkthrough</h3></summary>
-      ![Introduction to Git and GitHub course](https://github.com/LuckyDnepr/kottans-frontend/blob/main/Screenshots/Git-basics/Git-basics-shot_01.png?raw=true)
-  </details>        
+      <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/Screenshots/Git-basics/Git-basics-shot_01.png" alt="Introduction to Git and GitHub">
+      <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/Screenshots/Git-basics/Git-basics-shot_02.png" alt="Introduction to Git and GitHub">
+   </details>        
 </details>
