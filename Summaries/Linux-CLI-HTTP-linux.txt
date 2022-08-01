@@ -1,0 +1,34 @@
+- more - command is used to view the contents of a file
+- ls - look files of current directory
+- ls -l - look files of current directory with attributes
+- cd - change directory
+- cd .. - to the directory above your current directory
+- mkdir - make directory
+- mv - move file
+- mv -r - move directory
+- cp - copy file
+- cp -r - copy directory
+- pwd - print working directory
+- rm - remove file
+- rmdir - remove empty directory
+- rm -r - remove NONempty directory
+- chmod - change the security permissions 
+        chmod u/g/o (user/group/other) +/- r/w/x (read/write/eXecute)  
+- groups - watch your group
+- ~ - home directory
+- man - manual
+    man -k <text> - find <text> in manual
+- finger <username> - take UserID of user <username>
+- find ~ -name "poem*" - find file with name starting "poem" in home directory
+- cat - concatinate files
+        cat file1 file2 > file_acceptor - concatinate file1 + file2 to file file_acceptor
+        cat file1 file2 | lpr -P printer - concatinate file1 + file2 and print them on printer
+- lpr - send to printer (ex. lpr -P hp14 filename)
+- lpq - display print queue (ex. lpq -P hp14)
+- lprm - remove from print queue (ex. lprm -P hp14 Job_number)
+- df - view disk free space
+- df ~ - view disk free space on your home directory
+- ps aux - get a detailed list of all processes
+- grep - find patterns in data
+- kill PID - kill process gracefully with process ID
+- kill -9 PID - kill process immediately with process ID

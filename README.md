@@ -29,3 +29,28 @@
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/Screenshots/Git-basics/learngitbranching.js.org-shot_02.png">
    </details>        
 </details>
+<details>
+<summary><h2>Linux, CLI and HTTP</h2></summary>
+  <details>
+  <summary><h3>Мои впечатления О_о</h3></summary>
+    <options>
+      <ul><h3>Linux</h3>
+        <ul><h5>Новое для меня... (как постоянного usera Windows...)</h5>
+          <li>Операторы lpr, lpq, lprm, finger, df, ps aux</li>
+        <ul><h5>Удивило меня...</h5>
+          <li>Специфика применения оператора "cat"</li>
+        </ul>
+        <ul><h5>Буду использовать...</h5>
+          <li>Думаю пригодятся почти все команды из курса</li>
+        </ul>
+      </ul>
+    </options>
+  </details>
+  <details>
+  <summary><h3>Скриншоты прохождения</h3></summary>
+      <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/Screenshots/Linux_CLI_and_HTTP/Linux_CLI_and_HTTP-linux01.png" alt="Linux_CLI_and_HTTP">
+      <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/Screenshots/Linux_CLI_and_HTTP/Linux_CLI_and_HTTP-linux02.png" alt="Linux_CLI_and_HTTP">
+      <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/Screenshots/Linux_CLI_and_HTTP/Linux_CLI_and_HTTP-linux03.png" alt="Linux_CLI_and_HTTP">
+      <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/Screenshots/Linux_CLI_and_HTTP/Linux_CLI_and_HTTP-linux04.png" alt="Linux_CLI_and_HTTP">
+   </details>        
+</details>
