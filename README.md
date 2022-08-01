@@ -37,6 +37,7 @@
       <ul><h3>Linux</h3>
         <ul><h5>Новое для меня... (как постоянного usera Windows...)</h5>
           <li>Операторы lpr, lpq, lprm, finger, df, ps aux</li>
+        </ul>
         <ul><h5>Удивило меня...</h5>
           <li>Специфика применения оператора "cat"</li>
         </ul>
