@@ -8,11 +8,13 @@
           <li>Operations to move branches to commits</li>
           <li>Operations to copy commits</li>
           <li>Operations of merging branches</li>
+          <li><strong>Merge</strong> branches is more clear for me than <strong>rebase</strong></li>
+          <li>Advanced level of work with remote repository is <strong>partially clear</strong>, but there are some gaps that may be closed in the process of working on real projects</li>
         </ul>     
-        <ul><h4>Surprised me<h4>
+        <ul><h5>Surprised me</h5>
           <li>How commit cancellation is implemented (via reverse commit)</li>
         </ul>
-        <ul><h5>I will use...<h5>
+        <ul><h5>I will use...</h5>
           <li>Commit cancellation</li>
           <li>Operations with branches</li>
         </ul>
