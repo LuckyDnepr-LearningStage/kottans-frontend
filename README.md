@@ -1,5 +1,6 @@
 <details>
 <summary><h2>Git Basics</h2></summary>
+<a target="_blank" href="https://github.com/LuckyDnepr/kottans-frontend/blob/main/Summaries/git_basics.html">Конспект Git Basics</a>
   <details>
   <summary><h3>Мои впечатления О_о</h3></summary>
     <options>
