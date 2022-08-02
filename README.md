@@ -1,3 +1,4 @@
+[Мои конспекты можно посмотреть здесь... Click me](https://luckydnepr.github.io/kottans-frontend/)
 <details>
 <summary><h2>Git Basics</h2></summary>
   <details>
