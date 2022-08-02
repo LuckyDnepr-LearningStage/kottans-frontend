@@ -1,4 +1,4 @@
-<h3><a href="https://luckydnepr.github.io/kottans-frontend/)" target="_blank">Мои конспекты можно посмотреть здесь</a></h3>
+<h3><a href="https://luckydnepr.github.io/kottans-frontend/" target="_blank">Мои конспекты можно посмотреть здесь</a></h3>
 <details>
 <summary><h2>Git Basics</h2></summary>
   <details>
