@@ -1,0 +1,572 @@
+<!document html>
+
+<head>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-size: 1.2em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 60%;
+            margin: auto;
+            color: black;
+            margin-bottom: 4em;
+        }
+        header {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .logo {
+            height: 3em;
+        }
+
+        nav {
+            font-size: 1.4em;
+        }
+
+        a {
+            color: black;
+            transition: color 500ms;
+        }
+        a:hover {
+            color:coral;
+        }
+
+        h3 {
+            color:royalblue;
+        }
+
+        .gototop {
+            color:deepskyblue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <img class="logo" src="../img/git-logo.svg" alt="GitLogo" height="50%">
+        <header id="top-of-page"><h1>Конспект по Git Basics</h1></header>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                0. Установка
+            </li>
+            <ul>
+                <li>
+                    <a href="#item0-0">0.0 Установка на debian \ ubuntu</a>
+                </li>
+                <li>
+                    <a href="#item0-1">0.1 Установка на redhat \ centos</a>
+                </li>
+                <li>
+                    <a href="#item0-2">0.2 Установка на windows</a>
+                </li>
+            </ul>  
+            <li>
+                1. Конфигурация
+            </li>
+            <ul>
+                <li>
+                    <a href="#item1-0">1.0 Конфигурация .gitconfig</a>
+                </li>
+
+                <li>
+                    <a href="#item1-1">1.1 Не обязательно \ Параметры установки окончаний строк \ Установка отображения unicode</a>
+                </li>
+            </ul>
+            <li>
+                <a href="#item2">2. Git работа с Local Repository / локальным репозиторием</a>
+            </li>
+            <li>
+                <a href="#item3">3. Логи \ история изменений</a>
+            </li>
+            <li>
+                <a href="#item4">4. Игнорирование файлов \ .gitignore</a>
+            </li>
+            <li>
+                <a href="#item5">5. Загрузка проекта на GitHub HTTPS</a>
+            </li>    
+            <li>
+                <a href="#item6">6. Создание и работа с ветвями (Branch) git</a>
+            </li>
+            <li>
+                <a href="#item7">7. Git миграция ветки fix_error в master</a>
+            </li>
+            <li>
+                <a href="#item8">8. Git удаление не нужной ветки test</a>
+            </li>
+            <li>
+                <a href="#item9">9. GIT ПОЛНЫЙ РАБОЧИЙ ЦИКЛ ДЕЙСТВИЙ GIT + GITHUB</a>
+            </li>
+
+            <li>
+                <a href="#item4"></a>
+            </li>
+
+            
+        </ul>
+    </nav>
+
+
+        <section id="item0-0">
+            <h3>0. Установка debian \ ubuntu</h3>
+            <article>
+                <ul>
+                    <li>
+                        <strong>sudo apt update && sudo apt upgrade</strong> - обновить список пакетов и обновить
+                        установленные пакеты
+                    </li>
+                    <li>
+                        <strong>sudo apt install git</strong> - установка
+                    </li>
+                    <li>
+                        <strong>git --version</strong> - посмотреть версию
+                    </li>
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+        </section>
+
+        <section id="item0-1">
+            <h3>0.1 Установка на redhat \ centos</h3>
+            <article>
+                <ul>
+                    <li>
+                        <strong>sudo yum update</strong> - обновить установленные пакеты
+                    </li>
+                    <li>
+                        <strong>sudo yum install git</strong> - установка
+                    </li>
+                    <li>
+                        <strong>git --version</strong> - посмотреть версию
+                    </li>
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+        </section>
+
+        <section id="item0-2">
+            <h3>0.2 Установка на windows</h3>
+            <article>
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://git-scm.com/download/win">Git SCM download...</a> - скачиваем и
+                        устанавливаем...
+                    </li>
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+        </section>
+
+        
+        <section id="item1-0">
+            <h3>1.0 Конфигурация .gitconfig</h3>
+            <article>
+                <ul>
+                    <li>
+                        <strong>git config --global user.name "Evgeny Yakovlev"</strong> - задаем имя пользователя
+                    </li>
+                    <li>
+                        <strong>git config --global user.email "git@b14esh.com"</strong> - задаем электронную почту
+                        (правильную почту указывать не обязательно)
+                    </li>
+                    <li>
+                        <strong>git config -l</strong> - посмотреть что там настроили
+                    </li>
+                    <li>
+                        <strong>cat ~/.gitconfig</strong> - посмотреть что там настроили
+                    </li>
+                    <li>
+                        !!! В windows так же файл <strong>.gitconfig</strong> находится в профиле пользователя
+                    </li>
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+
+        </section>   
+
+        <section id="item1-1">
+            <h3>1.1 Не обязательно \ Параметры установки окончаний строк \ Установка отображения unicode</h3>
+            <article>
+                <ul>
+                    <h5>Параметры установки окончаний строк Unix/Mac:</h5>
+                    <li>
+                        git config --global core.autocrlf input
+                    </li>
+                    <li>
+                        git config --global core.safecrlf warn
+                    </li>
+                </ul>
+                <ul>
+                    <h5>Параметры установки окончаний строк Windows:</h5>
+                    <li>
+                        git config --global core.autocrlf true
+                    </li>
+                    <li>
+                        git config --global core.safecrlf warn
+                    </li>
+                </ul>
+
+                <ul>
+                    <h5>Установка отображения unicode</h5>
+                    <li>
+                        По умолчанию, git будет печатать не-ASCII символов в именах файлов в виде восьмеричных последовательностей.
+                    </li>
+                    <li>
+                        Что бы избежать нечитаемых строк, установите соответствующий флаги: git config --global core.quotepath off
+                    </li>
+                </ul>
+
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+
+        </section>   
+
+        <section id="item2">
+            <h3>2. Git работа с Local Repository / локальным репозиторием</h3>
+            <article>
+                <ul>
+                    <li> 
+                        <strong>mkdir myproject</strong> - создадим директорию 
+                    </li>
+                    <li> 
+                        <strong>git init /home/user_name/myproject</strong> - создать локальный репозиторий /home/user_name/myproject 
+                    </li>
+                    <li> 
+                        <strong>git init .</strong> - создать локальный репозиторий в текущем каталоге 
+                    </li>
+                    <li> 
+                        <strong>.git</strong> - каталог, который будет создан при выполнении команды (git init .), некая база данных git 
+                    </li>
+                    <li> 
+                        <strong>git status</strong> - покажет состояние репозитория (очень частая команда) 
+                    </li>
+                    <li> 
+                        <strong>git add .</strong> - подготовили файлы к созданию снимка 
+                    </li>
+                    <li> 
+                        <strong>git add *</strong> - подготовили файлы к созданию снимка 
+                    </li>
+                    <li> 
+                        <strong>git add file_name</strong> - подготовили файл созданию снимка 
+                    </li>
+                    <li> 
+                        <strong>git commit -m "My first commit "</strong> - создать снимок из подготовленных файлов 
+                    </li>
+                    <li> 
+                        <strong>git status</strong> - покажет состояние репозитория (очень частая команда) 
+                    </li>
+                    
+                    
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+        </section>   
+        
+        <section id="item3">
+            <h3>3. Логи \ история изменений</h3>
+            <article>
+                <ul>
+                    <li> 
+                        <strong>git status</strong> - покажет состояние репозитория (очень частая команда) 
+                    </li>
+                    <li> 
+                        <strong>git log</strong> - посмотреть историю изменений 
+                    </li>
+                    <li> 
+                        <strong>git log -1</strong> - посмотреть последний commit 
+                    </li>
+                    <li> 
+                        <strong>git log -1 p</strong> - посмотреть изменение в последнем commit 
+                    </li>
+                    <li> 
+                        <strong>git log -2 p</strong> - посмотреть изменение в последнем и предпоследнем commit 
+                    </li>
+                    <li> 
+                        <strong>git log ID -p</strong> - посмотреть изменения в commit с ID 
+                    </li>
+                    <li> 
+                        <strong>git log 62d232e98a5aa10aa13aee7e1f0cc1978c5d94e1 -p</strong> - посмотреть изменения в commit с 62d232e98a5aa10aa13aee7e1f0cc1978c5d94e1 
+                    </li>                    
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+        </section>  
+
+        <section id="item4">
+            <h3>4. Игнорирование файлов \ .gitignore</h3>
+            <article>
+                <ul>
+                    <li> 
+                        <strong>echo "Super Log file" > sfile.log</strong> - создали файл sfile.log с содержимым "Super Log file" 
+                    </li>
+                    <li> 
+                        <strong>mkdir log</strong> - создать папку log 
+                    </li>
+                    <li> 
+                        <strong>nano .gitignore</strong> - создаем файл .gitignore со следующим содержимым 
+                        <p>---------------</p>
+                        <p>*.log </p>
+                        <p>log/ </p>
+                        <p>filename.txt </p>
+                        <p>---------------</p> 
+                    </li>
+
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+        </section>   
+
+
+        <section id="item5">
+            <h3>5. Загрузка проекта на GitHub HTTPS</h3>
+            <article>
+                <ul>
+                    <li>
+                        <strong>mkdir myproject</strong> - создали каталог myproject
+                    </li>
+                    <li>
+                        <strong>cd myproject</strong> - перешли в каталог myproject
+                    </li>
+                    <li>
+                        <strong>git clone https://github.com/b14esh/myproject.git</strong> - загрузка проекта с github
+                    </li>
+                    <li>
+                        <strong>cd myproject</strong> - перешли в каталог myproject
+                    </li>
+                    <li>
+                        <strong>ls</strong> - посмотрели содержимое
+                    </li>
+                    <li>
+                        <strong>echo "Hello world" > first_file.txt</strong> - создали пустой файл
+                    </li>
+                    <li>
+                        <strong>git add .</strong> - подготовили файлы к созданию снимка (добавили статус stagid)
+                    </li>
+                    <li>
+                        <strong>git commit -m "My First commit"</strong> - создали снимок из подготовленных файлов (локальный
+                        репозиторий)
+                    </li>
+                    <li>
+                        <strong>git push origin</strong> - отправили изменения на удаленный репозиторий
+                    </li>
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+        </section>   
+
+        <section id="item6">
+            <h3>6. Создание и работа с ветвями (Branch) git</h3>
+            <article>
+                <ul>
+                    <p>Обычно ветку master <strong>НЕ</strong> изменяют.</p>
+                    <p>Создают копию master, например ветку fix_error, выполняют исправления в новой ветке fix_error.</p>
+                    <p>Когда в ветке fix_error все работает ее мигрируют в master.</p>
+                    <li>
+                        <strong>git init myapp</strong> - создали новый локальный репазиторий myapp
+                    </li>
+                    <li>
+                        <strong>cd myapp</strong> - перешли каталог myapp
+                    </li>
+                    <li>
+                        <strong>git status</strong> - посмотрели состояние git
+                    </li>
+                    <li>
+                        <strong>git branch</strong> - посмотреть ветки (в пустом репозитории команда ничего не покажет)
+                    </li>
+                    <li>
+                        <strong>echo "ver1" > index.html</strong> - создали файл index.html с содержимым ver1
+                    </li>
+                    <li>
+                        <strong>git add .</strong> - подготовили файлы к созданию снимка
+                    </li>
+                    <li>
+                        <strong>git commit -m "version1.0"</strong> - создал снимок из подготовленных файлов (локальный репозиторий)
+                    </li>
+                    <li>
+                        <strong>git branch</strong> - посмотреть ветки
+                    </li>
+                    <li>
+                        <strong>echo "ver2" > index.html</strong> - изменили файл index.html с содержимым ver2
+                    </li>
+                    <li>
+                        <strong>git add .</strong> - подготовили файлы к созданию снимка
+                    </li>
+                    <li>
+                        <strong>git commit -m "version2.0"</strong> - создал снимок из подготовленных файлов (локальный репозиторий)
+                    </li>
+                    <li>
+                        <strong>echo "ver3" > index.html</strong> - изменили файл index.html с содержимым ver3
+                    </li>
+                    <li>
+                        <strong>git add .</strong> - подготовили файлы к созданию снимка
+                    </li>
+                    <li>
+                        <strong>git commit -m "version3.0"</strong> - создал снимок из подготовленных файлов (локальный репозиторий)
+                    </li>
+                    <li>
+                        <strong>git branch fix_error</strong> - создать ветку fix_error
+                    </li>
+                    <li>
+                        <strong>git checkout fix_error</strong> - выполнить переход на ветку fix_error
+                    </li>
+                    <li>
+                        <strong>git branch</strong> - посмотреть ветки, убедится что переход на ветку fix_error был выполнен
+                    </li>
+                    <li>
+                        <strong>git status</strong> - посмотрели состояние git, убедится что переход на ветку fix_error был выполнен
+                    </li>
+                    <li>
+                        <strong>git checkout master</strong> - переключится на ветку мастер
+                    </li>
+                    <li>
+                        <strong>git branch -d fix_error</strong> - удалить ветку fix_error
+                    </li>
+                    <li>
+                        <strong>git checkout -b fix_error</strong> - создать ветку fix_error, переход будет выполнен сразу в ветку
+                        fix_error
+                    </li>
+                    <li>
+                        <strong>echo "ver4" > index.html</strong> - изменили файл index.html с содержимым ver4
+                    </li>
+                    <li>
+                        <strong>git add .</strong> - подготовили файлы к созданию снимка
+                    </li>
+                    <li>
+                        <strong>git commit -m "version4.0"</strong> - создал снимок из подготовленных файлов (локальный репозиторий)
+                    </li>
+                    <li>
+                        <strong>git log</strong> - посмотреть историю изменений
+                    </li>
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+        </section>   
+
+        <section id="item7">
+            <h3>7. Git миграция ветки fix_error в master</h3> 
+            <article>
+                <ul>
+                    <li>
+                        <strong>git branch</strong> - посмотрели какие у нас ветки
+                    </li>
+                    <li>
+                        <strong>git checkout master</strong> - перешли в ветку мастер
+                    </li>
+                    <li>
+                        <strong>git status</strong> - посмотрели состояние git, убедится что переход на ветку master был выполнен
+                    </li>
+                    <li>
+                        <strong>git merge fix_error</strong> - выполнили слияние веток master с fix_error
+                    </li>
+                    <li>
+                        <strong>git branch -d fix_error</strong> - удаляем ветку fix_eror
+                    </li>
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+        </section>   
+
+
+        
+        <section id="item8">
+            <h3>8. Git удаление не нужной ветки test</h3>
+            <article>
+                <ul>
+                    <li>
+                        <strong>git checkout -b test</strong> - создали ветку test и перешли в нее
+                    </li>
+                    <li>
+                        <strong>echo "test 1111" > index.html</strong> - создали файл index.html с содержимым "test 1111"
+                    </li>
+                    <li>
+                        <strong>git add .</strong> - подготовили файлы к созданию снимка
+                    </li>
+                    <li>
+                        <strong>git commit -m "test"</strong> - создал снимок из подготовленных файлов (локальный репозиторий)
+                    </li>
+                    <li>
+                        <strong>git checkout master </strong>- перешли в ветку мастер
+                    </li>
+                    <li>
+                        <strong>git branch -d test</strong> - решили прибить ветку не нужна... (windows удалила, а вот на linux ошибка error: The branch 'test' is not fully merged, просит -D)
+                    </li>
+                    <li>
+                        <strong>git branch -D test</strong> - удалили ветку
+                    </li>
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+        </section>   
+        
+        <section id="item9">
+            <h3>9. Git полный рабочий цикл действий git + github</h3>
+            <article>
+                <ol>
+                    <li>
+                        <strong>git clone git@github.com:b14esh/myproject.git</strong> - клонируем репозиторий
+                    </li>
+                    <li>
+                        <strong>cd myproject/</strong> - перешли в каталог myproject
+                    </li>
+                    <li>
+                        <strong>git branch</strong> - показать ветви
+                    </li>
+                    <li>
+                        <strong>git checkout -b evgeny_task001</strong> - создаем новую ветвь evgeny_task001 для работы
+                    </li>
+                    <li>
+                        <strong>nano x7.txt</strong> - начинаем работать над файлом
+                    </li>
+                    <li>
+                        <strong>git status</strong> - посмотрели состояние git
+                    </li>
+                    <li>
+                        <strong>git add .</strong> - подготовили файлы к созданию снимка
+                    </li>
+                    <li>
+                        <strong>git commit -m "test checkout branch"</strong>
+                    </li>
+                    <li>
+                        <strong>git statu</strong>s - посмотрели состояние git
+                    </li>
+                    <li>
+                        <strong>git log</strong> - посмотреть историю изменений
+                    </li>
+                    <li>
+                        <strong>git push origin</strong> - пытаемся залить на сервер github исправления в файле, получаем ошибку что нет
+                        такой ветки evgeny_task001, и команду для создания ветви
+                    </li>
+                    <li>
+                        <strong>git push --set-upstream origin evgeny_task001</strong> - выполняем команду для загрузки на github и
+                        создания ветви evgeny_task001
+                    </li>
+                    <li>
+                        Идем на github, нужно бы наши исправления добавить в мастер, запрашиваем выполнить merge жмем на
+                        кнопку "Compare & Pull Request". Собственно там будет выполнен "Merge pull request".
+                    </li>
+                    <li>
+                        <strong>git checkout master</strong> - переходим в мастер ветку
+                    </li>
+                    <li>
+                        <strong>git push origin --delete evgeny_task001</strong> - работу по таску мы сделали, можно удалять нашу ветку
+                        evgeny_task001
+                    </li>
+                </ol>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+        </section>   
+        
+    </body>
