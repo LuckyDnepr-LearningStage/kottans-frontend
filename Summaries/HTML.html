@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            background-color: lightgrey;
+        }
+
+        body {
+            font-size: 1.2em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 60%;
+            margin: auto;
+            color: black;
+            margin-bottom: 4em;
+        }
+        .header {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 1.8em;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .logo {
+            height: 3em;
+        }
+
+        nav {
+            font-size: 1.4em;
+        }
+
+        a {
+            color: black;
+            transition: color 500ms;
+        }
+        a:hover {
+            color:coral;
+        }
+
+        h3 {
+            color:royalblue;
+        }
+
+        .gototop {
+            color:deepskyblue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <label id="top-of-page"></label>
+    <header>
+        <p class="header">Конспект по HTML</p>
+        <img class="logo" src="../img/html5-logo.svg" alt="HTML5Logo" height="50%">
+    </header>
+    <nav>
+        <ul>
+
+            <li>
+                <a href="#item1">1. HTML tags</a>
+            </li>
+            <li>
+                <a href="#item2">2. HTML tables</a>
+            </li>
+            <li>
+                <a href="#item3">3. HTML forms</a>
+            </li>    
+            <li>
+                <a href="#item4">4. Form validation</a>
+            </li>
+            <li>
+                <a href="#item5">5. Semantic HTML</a>
+            </li>
+
+            
+        </ul>
+    </nav>
+
+
+        <section id="item1">
+            <h3>1. HTML tags</h3>
+            <article>
+                <ul>
+                    <li>
+                        Объявление <strong>&#x3C;!DOCTYPE html&#x3E;</strong> всегда должно быть первой строкой кода в ваших HTML-файлах.
+                        Это позволяет браузеру узнать, какую версию HTML ожидать.
+                    </li>
+                    <li>
+                        Элемент <strong>&#x3C;html&#x3E;</strong> будет содержать весь ваш HTML-код.
+                    </li>
+                    <li>
+                        Информация о веб-странице, например заголовок, находится внутри <strong>&#x3C;head&#x3E;</strong> страницы.
+                    </li>   
+                    <li>
+                        Вы можете добавить заголовок на свою веб-страницу, используя элемент <strong>&#x3C;title&#x3E;</strong> внутри заголовка.
+                        Название веб-страницы отображается на вкладке браузера.
+                    </li>
+                    <li>
+                        Теги привязки <strong>&#x3C;a&#x3E;</strong> используются для ссылки на внутренние страницы,
+                        внешние страницы или контент на той же странице. Вы можете создавать разделы на веб-странице и переходить к ним, 
+                        используя теги <strong>&#x3C;a&#x3E;</strong> и добавляя идентификаторы к элементам, к которым вы хотите перейти.
+                    </li>
+                    <li>
+                        <strong>Пробелы между элементами HTML</strong> помогают упростить чтение кода, не изменяя при этом внешний вид элементов в браузере.
+                        Отступы также помогают облегчить чтение кода. Это делает отношения между родителями и детьми видимыми. 
+                    </li>
+                    <li>
+                        Комментарии пишутся в HTML с использованием следующего синтаксиса: <strong>&#x3C;!-- комментарий --&#x3E;</strong>.
+                    </li>
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+        </section>
+
+        <section id="item2">
+            <h3>2. HTML tables</h3>
+            <article>
+                <ul>
+                    <li>
+                        Элемент <strong>&#x3C;table&#x3E;</strong> создает таблицу. Элемент <strong>&#x3C;li&#x3E;</strong> добавляет строки в таблицу.
+                    </li>
+                    <li>
+                        Чтобы добавить данные в строку, вы можете использовать элемент <strong>&#x3C;td&#x3E;</strong>.
+                    </li>
+                    <li>
+                        Заголовки таблиц поясняют значение данных. Заголовки добавляются с помощью элемента <strong>&#x3C;th&#x3E;</strong>.
+                    </li>
+                    <li>
+                        Табличные данные могут охватывать столбцы с помощью атрибута <strong>colspan</strong>.
+                    </li>
+                    <li>
+                        Табличные данные могут охватывать строки с помощью атрибута <strong>rowspan</strong>.
+                    </li>
+                    <li>
+                        Таблицы можно разделить на три основные части: заголовок, тело и нижний колонтитул.
+                    </li>
+                    <li>
+                        Заголовок таблицы создается с помощью элемента <strong>&#x3C;thead&#x3E;</strong>. Тело таблицы создается с помощью элемента <strong>&#x3C;tbody&#x3E;</strong>.
+                    </li>
+                    <li>
+                        Нижний колонтитул таблицы создается с помощью элемента <strong>&#x3C;tfoot&#x3E;</strong>.
+                    </li>
+                    <li>
+                        Все свойства CSS, о которых вы узнали в этом курсе, можно применять к таблицам и их данным.
+                    </li>
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+        </section>
+
+        <section id="item3">
+            <h3>3. HTML forms</h3>
+            <article>
+                <ul>
+                    <li>
+                        Назначение <strong>&#x3C;form&#x3E;</strong> — позволить пользователям вводить информацию и
+                        отправлять ее.
+                    </li>
+                    <li>
+                        Атрибут действия <strong>&#x3C;form&#x3E;</strong>strong> определяет, куда направляется
+                        информация формы.
+                    </li>
+                    <li>
+                        Атрибут метода <strong>&#x3C;form&#x3E;</strong> определяет, как информация отправляется и
+                        обрабатывается.
+                    </li>
+                    <li>
+                        Чтобы добавить поля для ввода информации пользователями, мы используем элемент
+                        <strong>&#x3C;input&#x3E;</strong> и устанавливаем атрибут <strong>type</strong> в поле по нашему выбору:
+                    </li>
+                        <ul>
+                            <li>
+                                Установка типа на <strong>text</strong> создает поле с одной строкой для ввода текста.
+                            </li>
+                            <li>
+                                Установка типа <strong>password</strong> создает поле с одной строкой, которое подвергает цензуре ввод текста.
+                            </li>
+                            <li>
+                                Установка типа на <strong>number</strong> создает поле с одной строкой для ввода числа.
+                            </li>
+                            <li>
+                                Установка типа <strong>range</strong> создает ползунок для выбора из диапазона чисел.
+                            </li>
+                            <li>
+                                Установка типа <strong>checkbox</strong> создает один флажок, который можно связать с другими флажками.
+                            </li>
+                            <li>
+                                Установка типа <strong>radio</strong> создает радиокнопку, которую можно связать с другими радиокнопками.
+                            </li>
+                            <li>
+                                Установка типа на <strong>datalist</strong> соединит <strong>&#x3C;input&#x3E;</strong> с элементом
+                                <strong>&#x3C;datalist&#x3E;</strong>, если идентификаторы обоих совпадают.
+                            </li>
+                            <li>
+                                Установка типа «отправить» создает кнопку отправки.
+                            </li>
+                        </ul>
+                    <li>
+                        Элемент <strong>&#x3C;select&#x3E;</strong> заполняется элементами
+                        <strong>&#x3C;option&#x3E;</strong> и
+                        отображает выбор из раскрывающегося списка.
+                    </li>
+                    <li>
+                        Элемент <strong>&#x3C;datalist&#x3E;</strong> заполняется элементами
+                        <strong>&#x3C;option&#x3E;</strong> и
+                                работает с <strong>&#x3C;input&#x3E;</strong> для поиска вариантов.
+                    </li>
+                    <li>
+                        Элемент <strong>&#x3C;textarea&#x3E;</strong> — это поле ввода текста с настраиваемой областью.
+                    </li>
+                    <li>
+                        При отправке <strong>&#x3C;form&#x3E;</strong> имя полей, которые принимают ввод, и значение этих
+                        полей
+                        отправляются в виде пар имя=значение.
+                    </li>
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+        </section>
+
+        
+        <section id="item4">
+            <h3>4. Form validation</h3>
+            <article>
+                <ul>
+                    <li>
+                        Проверка на стороне клиента происходит в браузере перед отправкой информации на сервер.
+                    </li>
+                    <li>
+                        Добавление требуемого атрибута к элементу, связанному с вводом, проверяет, что поле ввода содержит информацию.
+                    </li>
+                    <li>
+                        Присвоение значения атрибуту <strong>"min"</strong> элемента числового ввода проверяет приемлемое минимальное значение.
+                    </li>
+                    <li>
+                        Присвоение значения атрибуту <strong>"max"</strong> элемента числового ввода проверяет приемлемое максимальное значение.
+                    </li>
+                    <li>
+                        Присвоение значения атрибуту <strong>"minlength"</strong> элемента текстового ввода проверяет приемлемое минимальное количество символов.
+                    </li>
+                    <li>
+                        Присвоение значения атрибуту <strong>"maxlength"</strong> элемента текстового ввода проверяет допустимое максимальное количество символов.
+                    </li>
+                    <li>
+                        Присвоение <strong>"regex"</strong> регулярного выражения <strong>"pattern"</strong> сопоставляет ввод с предоставленным регулярным выражением.
+                    </li>
+                    <li>
+                        Если проверка <strong>form</strong> не проходит, пользователь получает сообщение с объяснением причины, и <strong>form</strong> не может быть отправлена.
+                    </li>
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+
+        </section>   
+
+        <section id="item5">
+            <h3>5. Semantic HTML</h3>
+            <article>
+                <ul>
+                    <li>
+                        Семантический HTML придает значение странице с помощью определенных элементов, которые обеспечивают контекст
+                        относительно того, что находится между тегами.
+                    </li>
+                    <li>
+                        Семантический HTML — это современный стандарт, который делает веб-сайт доступным для людей, которые используют
+                        программы чтения с экрана для перевода веб-страницы и улучшения SEO вашего веб-сайта.
+                    </li>
+                    <li>
+                        <strong>&#x3C;header&#x3E;</strong>, <strong>&#x3C;nav&#x3E;</strong>, <strong>&#x3C;main&#x3E;</strong> и
+                        <strong>&#x3C;footer&#x3E;</strong> создают базовую структуру веб-страницы.
+                    </li>
+                    <li>
+                        <strong>&#x3C;section&#x3E;</strong> определяет элементы в документе, такие как главы, заголовки или любую другую
+                        область документа с той же темой.
+                    </li>
+                    <li>
+                        <strong>&#x3C;article&#x3E;</strong> содержит контент, который имеет смысл сам по себе, например, статьи, блоги,
+                        комментарии и т. д.
+                    </li>
+                    <li>
+                        <strong>&#x3C;aside&#x3E;</strong> содержит информацию, связанную с основным содержанием, но не требуемую для
+                        понимания доминирующей информации.
+                    </li>
+                    <li>
+                        <strong>&#x3C;figure&#x3E;</strong> инкапсулирует все типы носителей.
+                    </li>
+                    <li>
+                        <strong>&#x3C;figcaption&#x3E;</strong> используется для описания медиа в <strong>&#x3C;figure&#x3E;</strong>.
+                    </li>
+                    <li>
+                        Элементы <strong>&#x3C;video&#x3E;</strong>, <strong>&#x3C;embed&#x3E;</strong> и <strong>&#x3C;audio&#x3E;</strong>
+                        используются для мультимедийных файлов.
+                    </li>
+                </ul>
+
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+
+        </section>   
+
+    </body>
