@@ -14,14 +14,15 @@
             color: black;
             margin-bottom: 4em;
         }
-        header {
+        .header {
             text-align: center;
             text-decoration: underline;
+            font-size: 1.8em;
         }
 
-        .header {
+        header {
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
         }
@@ -54,10 +55,11 @@
 </head>
 
 <body>
-    <div class="header">
+    <label id="top-of-page"></label>
+    <header>
+        <p class="header">Конспект по Git Basics</p>
         <img class="logo" src="../img/git-logo.svg" alt="GitLogo" height="50%">
-        <header id="top-of-page"><h1>Конспект по Git Basics</h1></header>
-    </div>
+    </header>
     <nav>
         <ul>
             <li>
