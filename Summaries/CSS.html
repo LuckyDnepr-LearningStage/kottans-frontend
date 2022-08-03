@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            background-color: lightgrey;
+        }
+
+        body {
+            font-size: 1.2em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 60%;
+            margin: auto;
+            color: black;
+            margin-bottom: 4em;
+        }
+        .header {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 1.8em;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .logo {
+            height: 3em;
+        }
+
+        nav {
+            font-size: 1.4em;
+        }
+
+        a {
+            color: black;
+            transition: color 500ms;
+        }
+        a:hover {
+            color:coral;
+        }
+
+        h3 {
+            color:royalblue;
+        }
+
+        .gototop {
+            color:deepskyblue;
+        }
+
+        .dark_background {
+            background-color:rgb(80, 80, 80);
+            border: 2px;
+            border-radius: 2em;
+            justify-content: center;
+        }
+
+        .light_background {
+            background-color:cornsilk;
+            border: 2px;
+            border-radius: 2em;
+            justify-content: center;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        
+    </style>
+
+</head>
+
+<body>
+    <label id="top-of-page"></label>
+    <header>
+        <p class="header">Конспект по CSS</p>
+        <img class="logo" src="../img/css3-logo.svg" alt="css3Logo" height="50%">
+    </header>
+    <nav>
+        <ul>
+
+            <li>
+                <a href="#item1">1. Настройки и синтаксис</a>
+            </li>
+            <li>
+                <a href="#item2">2. Селекторы</a>
+            </li>
+            <li>
+                <a href="#item3">3. Визуальные правила</a>
+            </li>    
+            <li>
+                <a href="#item4">4. Box model</a>
+            </li>
+            
+        </ul>
+    </nav>
+
+
+        <section id="item1">
+            <h3>1. Настройки и синтаксис</h3>
+            <article>
+                <ul>
+                    <li>
+                        Условия набора правил:
+                    </li>
+                    <ul>
+                        <li>
+                            <strong>Селектор</strong> — начало набора правил, используемого для нацеливания на элемент, которому будет
+                            присвоен стиль.
+                        </li>
+                        <li>
+                            <strong>Блок объявлений</strong> — код между (и включая) фигурными скобками ({ }), который содержит объявления
+                            CSS.
+                        </li>
+                        <li>
+                            <strong>Объявление</strong> — имя группы для пары свойств и значений, которая применяет стиль к выбранному
+                            элементу.
+                        </li>
+                        <li>
+                            <strong>Свойство</strong> — первая часть объявления, указывающая, какая визуальная характеристика элемента
+                            должна быть изменена.
+                        </li>
+                        <li>
+                            <strong>Значение</strong> — вторая часть объявления, обозначающая значение свойства.
+                        </li>
+                    </ul>
+                    <br>
+                    <li>
+                        Термины встроенного стиля:
+                    </li>
+                    <ul>
+                        <li>
+                            <strong>Открывающий тег</strong> — начало элемента HTML. Это элемент, который будет стилизован.
+                        </li>
+                        <li>
+                            <strong>Атрибут</strong> — атрибут стиля используется для добавления встроенных стилей CSS к элементу HTML.
+                        </li>
+                        <li>
+                            <strong>Объявление</strong> — имя группы для пары свойств и значений, которая применяет стиль к выбранному
+                            элементу.
+                        </li>
+                        <li>
+                            <strong>Свойство</strong> — первая часть объявления, указывающая, какая визуальная характеристика элемента
+                            должна быть изменена.
+                        </li>
+                        <li>
+                            <strong>Значение</strong> — вторая часть объявления, обозначающая значение свойства.
+                        </li>
+                    </ul>
+                </ul>
+                <div class="help_pic dark_background">
+                    <figure>
+                        <img src="/img/css_anatomy.svg" width="100%" alt="CSS Anatomy">
+                    </figure> 
+                </div>
+                
+            </article>
+            <article>
+                <ul>
+                    <li>
+                        Встроенные стили CSS могут быть записаны внутри открывающего тега HTML с использованием атрибута
+                        стиля.
+                    </li>
+                    <li>
+                        Встроенные стили можно использовать для оформления HTML, но это <strong>не лучшая практика</strong>.
+                    </li>
+                    <li>
+                        Внутренняя таблица стилей записывается с использованием элемента
+                        <strong>&#x3C;style&#x3E;</strong> внутри
+                        Элемент <strong>&#x3C;head&#x3E;</strong> HTML-файла.
+                    </li>
+                    <li>
+                        Внутренние таблицы стилей можно использовать для стилизации HTML, но это также <strong>не лучшая практика</strong>.
+                    </li>
+                    <li>
+                        Внешняя таблица стилей отделяет код CSS от HTML с помощью расширения файла <strong>«.css»</strong>.
+                    </li>
+                    <li>
+                        Внешние таблицы стилей — <strong>лучший подход</strong>, когда речь идет об использовании HTML и CSS.
+                    </li>
+                    <li>
+                        Внешние таблицы стилей связаны с HTML с помощью элемента <strong>&#x3C;link&#x3E;</strong>.
+                    </li>
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+        </section>
+
+        <section id="item2">
+            <h3>2. Селекторы</h3>
+            <article>
+                <ul>
+                    <li>
+                        CSS может выбирать элементы HTML по типу, классу, идентификатору и атрибуту.
+                    </li>
+                    <li>
+                        Все элементы можно выбрать с помощью универсального селектора (* {}).
+                    </li>
+                    <li>
+                        Элемент может иметь разные состояния с помощью селектора псевдокласса (:before, :after, :hover и
+                        т.д.).
+                    </li>
+                    <li>
+                        К одному элементу HTML можно применить несколько классов CSS.
+                    </li>
+                    <li>
+                        Классы можно использовать повторно, а идентификаторы можно использовать только один раз.
+                    </li>
+                    <li>
+                        Идентификаторы имеют более высокий приоритет, чем классы, а классы более более высокий
+                        приоритет, чем тип.
+                        Это означает, что идентификаторы переопределяют любые стили из класса, а классы переопределяют
+                        любые стили из селектора типа.
+                    </li>
+                    <li>
+                        Несколько селекторов могут быть объединены в цепочку для выбора элемента. Это повышает
+                        сложность, но может быть необходимо.
+                    </li>
+                    <li>
+                        Вложенные элементы можно выбирать, разделяя селекторы пробелом.
+                    </li>
+                    <li>
+                        Несколько несвязанных селекторов могут получить одинаковые стили, разделив имена селекторов
+                        запятыми.
+                    </li>
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+        </section>
+
+        <section id="item3">
+            <h3>3. Визуальные правила</h3>
+            <article>
+                <ul>
+                    <li>
+                        Свойство <strong>font-family</strong> определяет шрифт элемента.
+                    </li>
+                    <li>
+                        <strong>font-size</strong> управляет размером отображаемого текста.
+                    </li>
+                    <li>
+                        <strong>font-weight</strong> определяет, насколько тонким или толстым будет отображаться текст.
+                    </li>
+                    <li>
+                        Свойство <strong>text-align</strong> размещает текст слева, справа или в центре родительского контейнера.
+                    </li>
+                    <li>
+                        Текст может иметь два различных атрибута цвета: <strong>color</strong> и <strong>background-color</strong>. color определяет цвет текста, а
+                        <strong>background-color</strong> определяет цвет позади текста.
+                    </li>
+                    <li>
+                        CSS может сделать элемент прозрачным с помощью свойства <strong>opacity</strong>.
+                    </li>
+                    <li>
+                        CSS также может установить фон элемента на изображение с помощью свойства <strong>background-image</strong>.
+                    </li>
+                    <li>
+                        Флаг <strong>!important</strong> перекрывает любой стиль, однако его почти никогда не следует использовать, так как
+                        переопределить.
+                    </li>
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+        </section>
+
+        
+        <section id="item4">
+            <h3>4. Box model</h3>
+            <article>
+                
+                <ul>
+                    <li>
+                        <strong>width and height</strong>: ширина и высота области содержимого.
+                    </li>
+                    <li>
+                        <strong>padding</strong>: расстояние между областью содержимого и границей.
+                    </li>
+                    <li>
+                        <strong>border</strong>: толщина и стиль границы, окружающей область содержимого и отступы.
+                    </li>
+                    <li>
+                        <strong>margin</strong>: расстояние между границей и внешним краем элемента.
+                    </li>
+                </ul>
+
+                <div class="help_pic light_background">
+                    <figure>
+                        <img src="/img/diagram-boxmodel.svg" width="60%" alt="Box model">
+                    </figure> 
+                </div>
+
+                <ul>
+                    <li>
+                        <strong>Box model</strong> включает набор свойств, используемых для создания пространства вокруг элементов HTML
+                        и между ними.
+                    </li>
+                    <li>
+                        <strong>Height and Width</strong> области содержимого можно задать в пикселях или процентах.
+                    </li>
+                    <li>
+                        <strong>Borders</strong> окружают область содержимого и <strong>padding</strong> элемента. Цвет, стиль и толщину
+                        границы можно задать с помощью свойств CSS.
+                    </li>
+                    <li>
+                        <strong>Padding</strong> – это пространство между областью содержимого и границей. Его можно задать в пикселях или
+                        процентах.
+                    </li>
+                    <li>
+                        <strong>Margin</strong> – это расстояние за пределами границы элемента.
+                    </li>
+                    <li>
+                        <strong>Horizontal margins</strong> добавляются, поэтому общее пространство между границами соседних элементов
+                        равно сумме правого поля одного элемента и левого поля соседнего элемента.
+                    </li>
+                    <li>
+                        <strong>Vertical margins</strong> схлопываются, поэтому расстояние между вертикально смежными элементами равно
+                        <strong>большему</strong> полю.
+                    </li>
+                    <li>
+                        <strong>margin: 0</strong> автоматически центрирует элемент по горизонтали внутри его родительской области
+                        содержимого, если он имеет ширину.
+                    </li>
+                    <li>
+                        Свойство <strong>overflow</strong> может иметь значение <strong>display</strong>, <strong>hide</strong> или
+                        <strong>scroll</strong> и определяет, как HTML будет отображать содержимое, выходит за пределы области
+                        содержимого своего родителя.
+                    </li>
+                    <li>
+                        Свойство <strong>visibility</strong> может <strong>hide</strong> или <strong>show</strong> элементы.
+                    </li>
+                </ul>
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+
+        </section>   
+
+        
+    </body>
