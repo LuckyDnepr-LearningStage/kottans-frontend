@@ -44,6 +44,10 @@
             color:coral;
         }
 
+        a[href*=http] {
+            color: red;
+        }
+
         h3 {
             color:royalblue;
         }
@@ -72,8 +76,7 @@
             margin-right: auto;
         }
 
-
-        
+       
     </style>
 
 </head>
@@ -82,7 +85,7 @@
     <label id="top-of-page"></label>
     <header>
         <p class="header">Конспект по CSS</p>
-        <img class="logo" src="../img/css3-logo.svg" alt="css3Logo" height="50%">
+        <img class="logo" src="../img/css-logo.svg" alt="css3Logo" height="50%">
     </header>
     <nav>
         <ul>
@@ -99,6 +102,18 @@
             <li>
                 <a href="#item4">4. Box model</a>
             </li>
+            <li>
+                <a href="#item5">5. Changing the Box Model (изменение Box Model)</a>
+            </li>            
+            <li>
+                <a href="#item6">6. Display and positioning (отображение и позиционирование)</a>
+            </li>   
+            <li>
+                <a href="#item7">7. Цвета</a>
+            </li> 
+            <li>
+                <a href="#item8">8. Типографика</a>
+            </li> 
             
         </ul>
     </nav>
@@ -293,7 +308,7 @@
 
                 <div class="help_pic light_background">
                     <figure>
-                        <img src="/img/diagram-boxmodel.svg" width="60%" alt="Box model">
+                        <img src="/img/diagram-boxmodel.svg" width="80%" alt="Box model">
                     </figure> 
                 </div>
 
@@ -337,10 +352,275 @@
                         Свойство <strong>visibility</strong> может <strong>hide</strong> или <strong>show</strong> элементы.
                     </li>
                 </ul>
+                <div class="help_pic light_background">
+                    <figure>
+                        <img src="/img/margin-collapse.svg" width="80%" alt="Box model">
+                    </figure> 
+                </div>
             </article>
             <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
 
         </section>   
 
+
+        <section id="item5">
+            <h3>5. Changing the Box Model (изменение Box Model)</h3>
+            <article>
+                <div class="help_pic light_background">
+                    <figure>
+                        <img src="/img/diagram-contentbox.svg" width="80%" alt="Diagram Content Box">
+                    </figure> 
+                </div>
+                
+                <ul>
+                    <li>
+                        Многие свойства в CSS имеют значение по умолчанию и не должны быть явно установлены в таблице стилей.
+                    </li>
+                    <li>
+                        Например, вес шрифта по умолчанию для текста нормальный, но эта пара свойство-значение обычно не указывается в
+                        таблице стилей.
+                    </li>
+                    <li>
+                        То же самое можно сказать и о блочной модели, которую предполагают браузеры. В CSS свойство box-sizing управляет
+                        типом блочной модели, которую браузер должен использовать при интерпретации веб-страницы.
+                    </li>
+                    <li>
+                        Значение по умолчанию для этого свойства — content-box. Это та же блочная модель, на которую влияет толщина границ и
+                        отступы.
+                    </li>
+                </ul>
+
+                <div class="help_pic light_background">
+                    <figure>
+                        <img src="/img/diagram-borderbox.svg" width="80%" alt="Diagram Border Box">
+                    </figure> 
+                </div>
+
+                <ul>
+                    <li>
+                        К счастью, мы можем сбросить всю модель блока и указать новую: border-box.
+                    </li>
+                    <br>
+                        <p>* {</p>
+                        <p>box-sizing: border-box;</p>
+                        <p>}</p>
+                    <li>
+                        Код в приведенном выше примере сбрасывает блочную модель к границе для всех элементов HTML. Эта новая Box Model позволяет избежать
+                        размерные проблемы, которые существуют в прежней блочной модели, о которой вы узнали.
+                    </li>
+                    <li>
+                        В этой Box Model высота и ширина останутся фиксированными. Толщина границы и отступы будут
+                        включены внутри Box Model, а значит габаритные размеры коробки не меняются.
+                    </li>
+                        <br>
+                        &#x3C;h1>Hello World&#x3C;/h1>
+                        <p>* {</p>
+                        <p>box-sizing: border-box;</p>
+                        <p>}</p>
+                        <br>
+                        <p>h1 {</p>
+                        <p>border: 1px solid black;</p>
+                        <p>height: 200px;</p>
+                        <p>width: 300px;</p>
+                        <p>padding: 10px;</p>
+                        <p>}</p>
+                    <li>
+                        В приведенном выше примере высота блока останется равной 200 пикселям, а ширина — 300 пикселям. 
+                        Толщина границы и отступ останутся полностью внутри блока.
+                    </li>
+                </ul>
+
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+
+        </section> 
+
+        <section id="item6">
+            <h3>6. Display and positioning (отображение и позиционирование)</h3>
+            <article>
+
+                <ul>
+                    <li>
+                        Положение элемента по умолчанию можно изменить, установив его свойство position. Свойство position может принимать
+                        одно из пяти значений:
+                    </li>
+                        <ul>
+                            <li>
+                                static - the default value (it does not need to be specified)
+                            </li>
+                            <li>
+                                relative
+                            </li>
+                            <li>
+                                absolute
+                            </li>
+                            <li>
+                                fixed
+                            </li>
+                            <li>
+                                sticky
+                            </li>
+                        </ul>
+                    <li>
+                        Свойство <strong>position</strong> позволяет указать положение элемента.
+                    </li>
+                    <li>
+                        Если задано значение <srtong>relative</srtong>, позиция элемента определяется относительно его позиции по умолчанию
+                        на странице.
+                    </li>
+                    <li>
+                        Если задано значение <strong>absolute</strong>, позиция элемента определяется относительно его ближайшего
+                        позиционированного <strong>родительского</strong> элемента.
+                        Его можно прикрепить к любой части веб-страницы, но элемент все равно будет перемещаться вместе с остальной частью
+                        документа при прокрутке страницы.
+                    </li>
+                    <li>
+                        Если задано значение <strong>fixed</strong>, положение элемента можно закрепить в любой части веб-страницы. Элемент
+                        останется в поле зрения несмотря ни на что.
+                    </li>
+                    <li>
+                        Если задано значение <strong>sticky</strong>, элемент может прикрепляться к определенному смещению, когда
+                        пользователь прокручивает его родительский контейнер.
+                    </li>
+                    <li>
+                        <strong>z-index</strong> элемента указывает, насколько далеко назад или вперед элемент отображается на странице,
+                        когда он перекрывает другие элементы.
+                    </li>
+                    <li>
+                        Свойство display позволяет вам управлять тем, как элемент перемещается по вертикали и горизонтали в документе.
+                    </li>
+                    <li>
+                        <strong>строчные элементы</strong> занимают как можно меньше места, и их ширина или высота не могут регулироваться
+                        вручную.
+                    </li>
+                    <li>
+                        <strong>блочные элементы</strong> занимают ширину своего контейнера и могут иметь регулируемую вручную высоту.
+                    </li>
+                    <li>
+                        <strong>Элементы встроенного блока</strong> могут иметь заданную ширину и высоту, но они также могут располагаться
+                        рядом друг с другом и не занимать всю ширину своего контейнера.
+                    </li>
+                    <li>
+                        Свойство <strong>float</strong> может перемещать элементы максимально влево или вправо на веб-странице.
+                    </li>
+                    <li>
+                        Вы можете очистить левую или правую сторону элемента (или обе), используя свойство clear.
+                    </li>
+                </ul>
+
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+
+            <section id="item7">
+                <h3>7. Цвета</h3>
+                <article>
+                    Существует четыре способа представления цвета в CSS:
+                    <ul>
+                        Именованные цвета — существует более 140 именованных цветов, которые вы можете просмотреть <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">здесь</a>.
+                        <strong>HEX - шестнадцатеричные цвета</strong>
+                        <ul>
+                            <li>
+                                Шестнадцатеричная система счисления состоит из шестнадцати цифр, от 0 до 9, за которыми
+                                следуют буквы от «А» до «F».
+                            </li>
+                            <li>
+                                Шестнадцатеричные значения всегда начинаются с <strong>#</strong> и определяют значения
+                                красного, синего и зеленого с использованием шестнадцатеричных чисел, таких как
+                                <strong>#23F41A</strong>.
+                            </li>
+                            <li>
+                                Шестизначные шестнадцатеричные значения с повторяющимися значениями для каждого значения
+                                RGB можно сократить до трех цифр.
+                            </li>
+                        </ul>
+                        <strong>RGB</strong>
+                        <ul>
+                            <li>
+                                Цвета <strong>RGB</strong> используют синтаксис <strong>rgb()</strong> с одним значением
+                                для красного, одним значением для синего и одним значением для зеленого.
+                            </li>
+                            <li>
+                                Значения <strong>RGB</strong> находятся в диапазоне от 0 до 255 и выглядят так:
+                                <strong>rgb(7, 210, 50)</strong>.
+                            </li>
+
+                        </ul>
+                        <strong>HSL</strong>
+                        <ul>
+                            <li>
+                                <strong>HSL</strong> означает оттенок (сам цвет), насыщенность (интенсивность цвета) и
+                                легкость (насколько светлым или
+                                темный цвет).
+                            </li>
+                            <li>
+                                Оттенок варьируется от 0 до 360, а насыщенность и яркость представлены в процентах
+                                следующим образом:
+                                <strong>hsl(200, 20%, 50%)</strong>.
+                            </li>
+                            <li>
+                                Вы можете добавить непрозрачность к цвету в RGB и HSL, добавив четвертое значение,
+                                <strong>a</strong>, которое представлено как
+                                процент.
+                            </li>
+                        </ul>
+                    </ul>
+                    </article>
+                <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+            </section> 
+
+            <section id="item8">
+                <h3>8. Типографика</h3>
+                <article>
+                    <ul>
+                        <li>
+                            <strong>Типографика</strong> — это искусство расположения текста на странице.
+                        </li>
+                        <li>
+                            Текст может быть полужирным или тонким с помощью свойства <strong>font-weight</strong>.
+                        </li>
+                        <li>
+                            Текст может быть выделен курсивом с помощью свойства <strong>font-style</strong>.
+                        </li>
+                        <li>
+                            Расстояние между строками текста по вертикали можно изменить с помощью свойства
+                            <strong>line-height</strong>.
+                        </li>
+                        <li>
+                            Шрифты <strong>Serif</strong> имеют дополнительные детали на концах каждой буквы. Шрифты
+                            <strong>Sans-Serif</strong> — нет.
+                        </li>
+                        <li>
+                            Резервные шрифты используются, когда определенный шрифт не установлен на компьютере
+                            пользователя.
+                        </li>
+                        <li>
+                            Свойство <strong>word-spacing</strong> изменяет расстояние между отдельными словами.
+                        </li>
+                        <li>
+                            Свойство <strong>letter-spacing</strong> изменяет расстояние между отдельными буквами.
+                        </li>
+                        <li>
+                            Свойство <strong>text-align</strong> изменяет горизонтальное выравнивание текста.
+                        </li>
+                        <li>
+                            <strong>Google Fonts</strong> предоставляет бесплатные шрифты, которые можно использовать в
+                            файле HTML с тегом
+                            &#x3C;link&#x3C; или свойством <strong>@font-face</strong>.
+                        </li>
+                        <li>
+                            Локальные шрифты можно добавить в CSS с помощью свойства <strong>@font-face</strong> и
+                            пути к источнику шрифта.
+                            <p>@font-face {</p>
+                            <p>font-family: 'GlegooBanner';</p>
+                            <p>src: url('../fonts/Glegoo-Regular.woff2') format('woff2'),</p>
+                            <p>url('../fonts/Glegoo-Regular.woff') format('woff'),</p>
+                            <p>url('../fonts/Glegoo-Regular.ttf') format('truetype')</p>
+                            <p>}</p>
+                        </li>
+                    </ul>
+                    </article>
+                <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+            </section> 
         
     </body>
