@@ -31,6 +31,7 @@
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_git_basics/learngitbranching.js.org-shot_02.png">
    </details>        
 </details>
+
 <details>
 <summary><h2>Linux, CLI and HTTP</h2></summary>
   <details>
@@ -70,6 +71,7 @@
       </ul>
     </options>
   </details>
+
   <details>
   <summary><h3>Скриншоты прохождения</h3></summary>
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_linux_cli/Linux_CLI_and_HTTP-linux01.png" alt="Linux_CLI_and_HTTP">
@@ -78,6 +80,7 @@
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_linux_cli/Linux_CLI_and_HTTP-linux04.png" alt="Linux_CLI_and_HTTP">
    </details>        
 </details>
+
 <details>
 <summary><h2>VCS (hello gitty), GitHub and Collaboration</h2></summary>
   <details>
@@ -104,5 +107,38 @@
   <summary><h3>Скриншоты прохождения</h3></summary>
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_git_collaboration/Collaboration_01.png" alt="Collaboration">
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_git_collaboration/WorkingWithRemotes_01.png" alt="Working with remotes">
+   </details>        
+</details>
+
+<details>
+<summary><h2>Intro to HTML & CSS</h2></summary>
+  <details>
+  <summary><h3>Мои впечатления О_о</h3></summary>
+    <options>
+      <ul><h3>HTML</h3>
+        <h5>Новое для меня...</h5>
+        <ul>
+          <li>Учитывая мое предварительное знакомство с HTML - ничего нового</li>
+        </ul>
+        <h5>Буду использовать...</h5>
+        <ul>
+          <li>HTML во Frontend? Вы серьезно? :)</li>
+        </ul>
+      </ul>
+      <ul><h3>CSS</h3>
+        <h5>Новое для меня...</h5>
+        <ul>
+          <li>Добавление скачанных шрифтов в .css через @font-face</li>
+        </ul>
+        <h5>Буду использовать...</h5>
+        <ul>
+          <li>CSS в HTML который во Frontend? Откуда ему там взяться! :)</li>
+        </ul>
+      </ul>
+    </options>
+  </details>
+  <details>
+  <summary><h3>Скриншоты прохождения</h3></summary>
+      <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_html_css_intro/html_css_intro.png" alt="HTML and CSS intro">
    </details>        
 </details>
