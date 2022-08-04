@@ -72,8 +72,7 @@
             margin-right: auto;
         }
 
-
-        
+       
     </style>
 
 </head>
@@ -82,7 +81,7 @@
     <label id="top-of-page"></label>
     <header>
         <p class="header">Конспект по CSS</p>
-        <img class="logo" src="../img/css3-logo.svg" alt="css3Logo" height="50%">
+        <img class="logo" src="../img/css-logo.svg" alt="css3Logo" height="50%">
     </header>
     <nav>
         <ul>
@@ -99,6 +98,12 @@
             <li>
                 <a href="#item4">4. Box model</a>
             </li>
+            <li>
+                <a href="#item5">5. Changing the Box Model</a>
+            </li>            
+            <li>
+                <a href="#item6">6. Display and positioning</a>
+            </li>   
             
         </ul>
     </nav>
@@ -293,7 +298,7 @@
 
                 <div class="help_pic light_background">
                     <figure>
-                        <img src="/img/diagram-boxmodel.svg" width="60%" alt="Box model">
+                        <img src="/img/diagram-boxmodel.svg" width="80%" alt="Box model">
                     </figure> 
                 </div>
 
@@ -337,10 +342,171 @@
                         Свойство <strong>visibility</strong> может <strong>hide</strong> или <strong>show</strong> элементы.
                     </li>
                 </ul>
+                <div class="help_pic light_background">
+                    <figure>
+                        <img src="/img/margin-collapse.svg" width="80%" alt="Box model">
+                    </figure> 
+                </div>
             </article>
             <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
 
         </section>   
 
+
+        <section id="item5">
+            <h3>5. Changing the Box Model</h3>
+            <article>
+                <div class="help_pic light_background">
+                    <figure>
+                        <img src="/img/diagram-contentbox.svg" width="80%" alt="Diagram Content Box">
+                    </figure> 
+                </div>
+                
+                <ul>
+                    <li>
+                        Многие свойства в CSS имеют значение по умолчанию и не должны быть явно установлены в таблице стилей.
+                    </li>
+                    <li>
+                        Например, вес шрифта по умолчанию для текста нормальный, но эта пара свойство-значение обычно не указывается в
+                        таблице стилей.
+                    </li>
+                    <li>
+                        То же самое можно сказать и о блочной модели, которую предполагают браузеры. В CSS свойство box-sizing управляет
+                        типом блочной модели, которую браузер должен использовать при интерпретации веб-страницы.
+                    </li>
+                    <li>
+                        Значение по умолчанию для этого свойства — content-box. Это та же блочная модель, на которую влияет толщина границ и
+                        отступы.
+                    </li>
+                </ul>
+
+                <div class="help_pic light_background">
+                    <figure>
+                        <img src="/img/diagram-borderbox.svg" width="80%" alt="Diagram Border Box">
+                    </figure> 
+                </div>
+
+                <ul>
+                    <li>
+                        К счастью, мы можем сбросить всю модель блока и указать новую: border-box.
+                    </li>
+                    <br>
+                        <p>* {</p>
+                        <p>box-sizing: border-box;</p>
+                        <p>}</p>
+                    <li>
+                        Код в приведенном выше примере сбрасывает блочную модель к границе для всех элементов HTML. Эта новая Box Model позволяет избежать
+                        размерные проблемы, которые существуют в прежней блочной модели, о которой вы узнали.
+                    </li>
+                    <li>
+                        В этой Box Model высота и ширина останутся фиксированными. Толщина границы и отступы будут
+                        включены внутри Box Model, а значит габаритные размеры коробки не меняются.
+                    </li>
+                        <br>
+                        &#x3C;h1>Hello World&#x3C;/h1>
+                        <p>* {</p>
+                        <p>box-sizing: border-box;</p>
+                        <p>}</p>
+                        <br>
+                        <p>h1 {</p>
+                        <p>border: 1px solid black;</p>
+                        <p>height: 200px;</p>
+                        <p>width: 300px;</p>
+                        <p>padding: 10px;</p>
+                        <p>}</p>
+                    <li>
+                        В приведенном выше примере высота блока останется равной 200 пикселям, а ширина — 300 пикселям. 
+                        Толщина границы и отступ останутся полностью внутри блока.
+                    </li>
+                </ul>
+
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+
+        </section> 
+
+        <section id="item6">
+            <h3>6. Display and positioning</h3>
+            <article>
+                <!-- 
+                <div class="help_pic light_background">
+                    <figure>
+                        <img src="/img/diagram-contentbox.svg" width="80%" alt="Diagram Content Box">
+                    </figure> 
+                </div>
+                 -->
+                <ul>
+                    <li>
+                        Положение элемента по умолчанию можно изменить, установив его свойство position. Свойство position может принимать
+                        одно из пяти значений:
+                    </li>
+                        <ul>
+                            <li>
+                                static - the default value (it does not need to be specified)
+                            </li>
+                            <li>
+                                relative
+                            </li>
+                            <li>
+                                absolute
+                            </li>
+                            <li>
+                                fixed
+                            </li>
+                            <li>
+                                sticky
+                            </li>
+                        </ul>
+                    <li>
+                        Свойство <strong>position</strong> позволяет указать положение элемента.
+                    </li>
+                    <li>
+                        Если задано значение <srtong>relative</srtong>, позиция элемента определяется относительно его позиции по умолчанию
+                        на странице.
+                    </li>
+                    <li>
+                        Если задано значение <strong>absolute</strong>, позиция элемента определяется относительно его ближайшего
+                        позиционированного <strong>родительского</strong> элемента.
+                        Его можно прикрепить к любой части веб-страницы, но элемент все равно будет перемещаться вместе с остальной частью
+                        документа при прокрутке страницы.
+                    </li>
+                    <li>
+                        Если задано значение <strong>fixed</strong>, положение элемента можно закрепить в любой части веб-страницы. Элемент
+                        останется в поле зрения несмотря ни на что.
+                    </li>
+                    <li>
+                        Если задано значение <strong>sticky</strong>, элемент может прикрепляться к определенному смещению, когда
+                        пользователь прокручивает его родительский контейнер.
+                    </li>
+                    <li>
+                        <strong>z-index</strong> элемента указывает, насколько далеко назад или вперед элемент отображается на странице,
+                        когда он перекрывает другие элементы.
+                    </li>
+                    <li>
+                        Свойство display позволяет вам управлять тем, как элемент перемещается по вертикали и горизонтали в документе.
+                    </li>
+                    <li>
+                        <strong>строчные элементы</strong> занимают как можно меньше места, и их ширина или высота не могут регулироваться
+                        вручную.
+                    </li>
+                    <li>
+                        <strong>блочные элементы</strong> занимают ширину своего контейнера и могут иметь регулируемую вручную высоту.
+                    </li>
+                    <li>
+                        <strong>Элементы встроенного блока</strong> могут иметь заданную ширину и высоту, но они также могут располагаться
+                        рядом друг с другом и не занимать всю ширину своего контейнера.
+                    </li>
+                    <li>
+                        Свойство <strong>float</strong> может перемещать элементы максимально влево или вправо на веб-странице.
+                    </li>
+                    <li>
+                        Вы можете очистить левую или правую сторону элемента (или обе), используя свойство clear.
+                    </li>
+                </ul>
+
+            </article>
+            <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+
+        </section> 
         
     </body>
