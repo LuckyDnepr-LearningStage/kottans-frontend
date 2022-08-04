@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            background-color: lightgrey;
+        }
+
+        body {
+            font-size: 1.2em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 60%;
+            margin: auto;
+            color: black;
+            margin-bottom: 4em;
+        }
+
+        .header {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 1.8em;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .logo {
+            height: 3em;
+        }
+
+        nav {
+            font-size: 1.4em;
+        }
+
+        a {
+            color: black;
+            transition: color 500ms;
+        }
+
+        a:hover {
+            color: coral;
+        }
+
+        a[href*=http] {
+            color: red;
+        }
+
+        h3 {
+            color: royalblue;
+        }
+
+        .gototop {
+            color: deepskyblue;
+        }
+
+        .dark_background {
+            background-color: rgb(80, 80, 80);
+            border: 2px;
+            border-radius: 2em;
+            justify-content: center;
+        }
+
+        .light_background {
+            background-color: cornsilk;
+            border: 2px;
+            border-radius: 2em;
+            justify-content: center;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <label id="top-of-page"></label>
+    <header>
+        <p class="header">Конспект по Адаптивному Web Design</p>
+        <img class="logo" src="../img/css-logo.svg" alt="css3Logo" height="50%">
+    </header>
+    <nav>
+        <ul>
+
+            <li>
+                <a href="#item1">1. Set the viewport</a>
+            </li>
+            <li>
+                <a href="#item2">2. Размер контента в Viewport</a>
+            </li>
+            <li>
+                <a href="#item3">3. Макет</a>
+            </li>
+            <li>
+                <a href="#item4">4. Медиа-запросы</a>
+            </li>
+            <li>
+                <a href="#item5">5. Выбор точек останова</a>
+            </li>
+            <li>
+                <a href="#item6">6. Оптимизация текста</a>
+            </li>            
+
+
+        </ul>
+    </nav>
+
+
+    <section id="item1">
+        <h3>1. Set the viewport</h3>
+        <article>
+            <ul>
+                <p>&#x3C;!DOCTYPE html&#x3E;</p>
+                <p>&#x3C;html lang="en"&#x3E;</p>
+                <p>&#x3C;head&#x3E;</p>
+                <p>...</p>
+                <p>&#x3C;meta name="viewport" content="width=device-width, initial-scale=1"&#x3E;</p>
+                <p>...</p>
+                <p>&#x3C;/head&#x3E;</p>
+                <p>...</p>
+                <li>
+                    Использование мета-тега области просмотра <strong>width=device-width</strong> указывает странице
+                    соответствовать ширине экрана
+                </li>
+                <li>
+                    Некоторые браузеры сохраняют постоянную ширину страницы при повороте в ландшафтный режим и
+                    масштабируют,
+                    а не перекомпоновывают, чтобы заполнить экран. Добавление значения <strong>initial-scale=1</strong>
+                    указывает браузерам устанавливать соотношение 1:1 между пикселями CSS и независимыми от устройства
+                    пикселями независимо от ориентации устройства и позволяет странице использовать всю ширину альбомной
+                    ориентации.
+                </li>
+                <li>
+                    В дополнение к настройке начального масштаба вы также можете установить следующие атрибуты в области
+                    просмотра:
+                    <ul>
+                        <li>
+                            minimum-scale
+                        </li>
+                        <li>
+                            maximum-scale
+                        </li>
+                        <li>
+                            user-scalable
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Если они установлены, они могут отключить возможность пользователя масштабировать область просмотра,
+                    что может вызвать проблемы с доступностью. Поэтому мы <strong>не рекомендуем использовать эти атрибуты</strong>.
+                </li>
+            </ul>
+            <!-- <div class="help_pic dark_background">
+                    <figure>
+                        <img src="/img/css_anatomy.svg" width="100%" alt="CSS Anatomy">
+                    </figure> 
+                </div> -->
+
+        </article>
+
+        <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+    </section>
+
+    <section id="item2">
+        <h3>2. Размер контента в Viewport</h3>
+        <article>
+            <ul>
+                <li>
+                    <p>
+                        Изображение имеет фиксированные размеры, и если оно больше, чем область просмотра, это вызовет
+                        полосу прокрутки.
+                    </p> 
+                    <p>
+                        Обычный способ решить эту проблему — установить для всех изображений максимальную
+                        ширину 100%. Это приведет к тому, что изображение сожмется, чтобы соответствовать имеющемуся
+                        пространству, если размер области просмотра будет меньше, чем изображение. Однако, поскольку
+                        максимальная ширина, а не ширина равна 100%, изображение не будет растягиваться больше своего
+                        естественного размера.
+                    </p>
+                    <p>
+                        Как правило, безопасно добавить следующее в таблицу стилей, чтобы у вас
+                        никогда не было проблем с изображениями, вызывающими полосу прокрутки.
+                    </p>
+                </li>
+                <br>
+                <p>img {</p>
+                    <p>max-width: 100%;</p>
+                    <p>display: block;</p>
+                    <p>}</p>
+
+                <li>
+                    При использовании max-width: 100% вы переопределяете естественные размеры изображения, однако вы
+                    все
+                    равно должны использовать атрибуты <strong>width</strong> и <strong>height</strong> в теге
+                    <strong>&#x3C;img&#x3E;</strong>.
+                    Это связано с тем, что современные
+                    браузеры будут использовать эту информацию для резервирования места для изображения перед его
+                    загрузкой, что поможет избежать смещения макета при загрузке содержимого.
+                </li>
+            </ul>
+
+
+        </article>
+
+        <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+    </section>
+
+    <section id="item3">
+        <h3>3. Макет</h3>
+        <article>
+            <ul>
+                <li>
+                    <p>
+                        Поскольку размеры и ширина экрана в пикселях CSS сильно различаются между устройствами
+                        (например, между телефонами и планшетами и даже между разными телефонами), контент не должен
+                        зависеть от конкретной ширины области просмотра для хорошей визуализации.
+                    </p>
+                    <p>
+                        Современные методы компоновки <strong>CSS</strong>, такие как <strong>Flexbox</strong>,
+                        <strong>Grid Layout</strong> и <strong>Multicol</strong>, значительно упрощают создание этих гибких сеток.
+                        <p><a href="https://www.freecodecamp.org/news/an-animated-guide-to-flexbox-d280cf6afc35/">Шпаргалка по FlexBox от freecodecamp.org</a></p>
+                        <p><a href="https://www.freecodecamp.org/news/css-grid-tutorial-with-cheatsheet/">Шпаргалка по Grid Layout от freecodecamp.org</a></p>
+                        <p><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">Шпаргалка по Grid Layout от css-tricks.com</a></p>
+                    </p>
+                </li>
+                    
+                <li>
+                    Больше про Flexbox <a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Flexbox">здесь</a>
+                </li>
+                <li>
+                    Больше про Grid Layout <a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Grids">здесь</a>
+                </li>
+                <li>
+                    Больше про Multicol <a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">здесь</a>
+                </li>
+            </ul>
+
+
+        </article>
+
+        <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+    </section>
+
+    <section id="item4">
+        <h3>4. Медиа-запросы</h3>
+        <article>
+            <ul>
+                <li>
+                    Медиа-запросы размера Viewport
+                </li>
+                <br>
+                Медиа-запросы позволяют нам создавать отзывчивый интерфейс, в котором определенные стили применяются к
+                маленьким экранам, большим экранам и где-либо между ними. Поэтому функция, которую мы здесь
+                обнаруживаем, — это размер экрана, и мы можем проверить следующие вещи.
+                <br>
+                    <ul>
+                        <li>
+                            width (min-width, max-width)
+                        </li>
+                        <li>
+                            height (min-height, max-height)
+                        </li>
+                        <li>
+                            orientation
+                        </li>
+                        <li>
+                            aspect-ratio
+                        </li>
+                    </ul>
+                    Все эти функции отлично поддерживаются браузерами. Для получения более подробной информации, включая
+                    информацию о поддержке браузеров, см. <a href="https://developer.mozilla.org/docs/Web/CSS/@media/width">width</a>,
+                    <a href="https://developer.mozilla.org/docs/Web/CSS/@media/height">height</a>,
+                    <a href="https://developer.mozilla.org/docs/Web/CSS/@media/orientation">orientation</a> и
+                    <a href="https://developer.mozilla.org/docs/Web/CSS/@media/aspect-ratio">aspect-ratio</a> на MDN.
+                
+                    <li>
+                        Медиа-запросы в зависимости от возможностей устройства
+                    </li>
+                    <br>
+                    Учитывая диапазон доступных устройств, мы не можем сделать предположение, что каждое большое
+                    устройство представляет собой обычный настольный или портативный компьютер или что люди используют
+                    только сенсорный экран на небольшом устройстве. С некоторыми новыми дополнениями к спецификации
+                    медиа-запросов мы можем проверить такие функции, как тип указателя, используемого для взаимодействия
+                    с устройством, и может ли пользователь наводить курсор на элементы.
+                        <ul>
+                            <li>
+                                hover
+                            </li>
+                            <li>
+                                pointer
+                            </li>
+                            <li>
+                                any-hover
+                            </li>
+                            <li>
+                                any-pointer
+                            </li>
+                        </ul>   
+                        Эти новые функции хорошо поддерживаются во всех современных браузерах. Узнайте больше на страницах MDN для 
+                        <a href="https://developer.mozilla.org/docs/Web/CSS/@media/hover">hover</a>,
+                        <a href="https://developer.mozilla.org/docs/Web/CSS/@media/any-hover">any-hover</a>,
+                        <a href="https://developer.mozilla.org/docs/Web/CSS/@media/pointer">pointer</a> и 
+                        <a href="https://developer.mozilla.org/docs/Web/CSS/@media/any-pointer">any-pointer</a>
+                    </ul>
+        </article>
+
+        <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+    </section>
+
+    <section id="item5">
+        <h3>5. Выбор точек останова</h3>
+        <article>
+            <ul>
+                <li>
+                    Не определяйте точки останова на основе классов устройств. Определение точек останова на основе
+                    конкретных устройств, продуктов, торговых марок или операционных систем, которые используются сегодня,
+                    может привести к кошмару обслуживания. Вместо этого сам контент должен определять, как макет
+                    приспосабливается к своему контейнеру.
+                </li>
+                <ul>
+                    <li>
+                        Выберите основные контрольные точки, начав с малых размеров, а затем увеличивая
+                        <br>
+                        Сначала разработайте контент так, чтобы он помещался на маленьком экране, а затем расширяйте экран
+                        до тех пор, пока не понадобится точка останова. Это позволяет оптимизировать точки останова на
+                        основе контента и поддерживать минимально возможное количество точек останова.
+                    </li>
+                    <li>
+                        Затем измените размер браузера, пока между элементами не останется слишком много пустого
+                        пространства, и прогноз просто не будет выглядеть так хорошо.
+                    </li>
+                    <li>
+                        Чтобы <strong>вставить точку останова на 600px</strong>, создайте два медиа-запроса в конце вашего CSS для
+                        компонента, один для использования, когда браузер имеет размер <strong>600px и меньше</strong>, а другой —
+                        когда он <strong>шире 600px</strong>.
+                    </li>
+                    <p>@media (max-width: 600px) {</p>
+                    <p>}</p>
+                    <p>@media (min-width: 601px) {</p>
+                    <p>}</p>
+                    <li>
+                        Внутри медиа-запроса для максимальной ширины 600 пикселей добавьте CSS, который предназначен
+                        только для маленьких экранов. Внутри медиазапроса для минимальной ширины 601px добавьте CSS для
+                        больших экранов.
+                    </li>
+                </ul>   
+                <li>
+                    При необходимости выбирайте второстепенные точки останова
+                </li>
+                    <ul>
+                        <li>
+                            В дополнение к выбору основных точек останова при значительном изменении макета также
+                            полезно выполнять корректировку незначительных изменений. Например, между основными
+                            контрольными точками может быть полезно настроить поля или отступы элемента или увеличить
+                            размер шрифта, чтобы он выглядел более естественно в макете.
+                        </li>
+                    </ul>
+                <li>
+                    Точно так же для больших экранов лучше ограничить максимальную ширину контента, чтобы он не занимал всю ширину экрана.
+                </li>
+            </ul>
+        </article>
+
+        <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+    </section>
+
+    
+    <section id="item6">
+        <h3>6. Оптимизация текста</h3>
+        <article>
+            <ul>
+                <li>
+                    Классическая теория удобочитаемости предполагает, что идеальный столбец должен содержать от 70 до 80
+                    символов в строке (от 8 до 10 слов на английском языке). Таким образом, каждый раз, когда ширина
+                    текстового блока превышает 10 слов, рассмотрите возможность добавления точки останова.
+                </li>
+            </ul>
+        </article>
+
+        <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+    </section>
+
+    <section id="item6">
+        <h3>7. Оптимизация текста</h3>
+        <article>
+            <ul>
+                <li>
+                    Классическая теория удобочитаемости предполагает, что идеальный столбец должен содержать от 70 до 80
+                    символов в строке (от 8 до 10 слов на английском языке). Таким образом, каждый раз, когда ширина
+                    текстового блока превышает 10 слов, рассмотрите возможность добавления точки останова.
+                </li>
+            </ul>
+        </article>
+
+        <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+    </section>
+</body>
