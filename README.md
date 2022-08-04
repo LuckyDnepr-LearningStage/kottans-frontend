@@ -142,3 +142,32 @@
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_html_css_intro/html_css_intro.png" alt="HTML and CSS intro">
    </details>        
 </details>
+
+
+<details>
+<summary><h2>Адаптивний Web Design</h2></summary>
+  <details>
+  <summary><h3>Мои впечатления О_о</h3></summary>
+    <options>
+      <ul><h3>HTML</h3>
+        <h5>Новое для меня...</h5>
+        <ul>
+          <li>Встали на места многи вопросы по адаптации под разные дисплеи и устройства</li>
+          <li>Знания по Grid и Flex</li>
+        </ul>
+        <h5>Буду использовать...</h5>
+        <ul>
+          <li>Grid Layout</li>
+          <li>Flex Box</li>
+          <li>Адаптация под устройства</li>
+        </ul>
+      </ul>
+    </options>
+  </details>
+  <details>
+  <summary><h3>Скриншоты прохождения</h3></summary>
+      <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_responsive_web_design/resp-web-design-froggy-game.png" alt="Froggy Game">
+      <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_responsive_web_design/resp-web-design-grid-garden-game.png" alt="Grid Garden">
+   </details>        
+</details>
+
