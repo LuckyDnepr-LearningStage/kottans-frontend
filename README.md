@@ -171,6 +171,31 @@
    </details>
 </details>
 
+
+<details>
+<summary><h2>HTML & CSS practice: Hooli-style Popup</h2></summary>
+<p>Хочу сказать отдельное спасибо @AnnaStoyano и @A-Ostrovnyy за терпение при review данной работы.</p>
+  <details>
+  <summary><h3>Мои впечатления О_о</h3></summary>
+    <options>
+      <ul><h3>HTML & CSS practice: Hooli-style Popup</h3>
+        <h5>Новое для меня...</h5>
+        <ul>
+          <li>Практическое применение знаний по HTML и CSS с нуля.</li>
+          <li>Практическое применение flexbox и grid</li>
+          <li>Некоторые вопросы аттрибутов для скринридеров, адаптивность под разные разрешения.</li>
+          <li>Применение checkbox`в для динамики в меню.</li>
+        </ul>
+        <h5>Буду использовать...</h5>
+        <ul>
+          <li>flexbox и grid - очень понравилось.</li>
+        </ul>
+      </ul>
+    </options>
+  </details>
+    <p>Посмотреть можно <a src="https://luckydnepr.github.io/Hooli-style-popup/">ЗДЕСЬ</a></p>
+</details>
+
 <details>
 <summary><h2>JS Basics</h2></summary>
   <details>
