@@ -10,7 +10,7 @@
           <li>Операции по перемещению веток на определенные коммиты</li>
           <li>Операции копирования коммитов</li>
           <li>Операции слияния коммитов</li>
-        </ul>     
+        </ul>
         <h5>Удивило меня...</h5>
         <ul>
           <li>Методика обращения коммитов (через создание "обратного" коммита</li>
@@ -29,7 +29,7 @@
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_git_basics/Git-basics-shot_02.png" alt="Introduction to Git and GitHub">
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_git_basics/learngitbranching.js.org-shot_01.png">
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_git_basics/learngitbranching.js.org-shot_02.png">
-   </details>        
+   </details>
 </details>
 
 <details>
@@ -78,7 +78,7 @@
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_linux_cli/Linux_CLI_and_HTTP-linux02.png" alt="Linux_CLI_and_HTTP">
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_linux_cli/Linux_CLI_and_HTTP-linux03.png" alt="Linux_CLI_and_HTTP">
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_linux_cli/Linux_CLI_and_HTTP-linux04.png" alt="Linux_CLI_and_HTTP">
-   </details>        
+   </details>
 </details>
 
 <details>
@@ -91,7 +91,7 @@
         <ul>
           <li>Практически вся информация данного курса</li>
           <li>Прохождение на learngitbranching.js.org раздела "Удаленные репозитории" далось нелегко и многие задачи до конца не отложились в памяти, но думаю, что это придет при непосредственном использовании под присмотром ментора</li>
-        </ul>     
+        </ul>
         <h5>Удивило меня...</h5>
         <ul>
           <li>Возможность закрывать задачи на GitHub через Commit`ы</li>
@@ -107,7 +107,7 @@
   <summary><h3>Скриншоты прохождения</h3></summary>
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_git_collaboration/Collaboration_01.png" alt="Collaboration">
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_git_collaboration/WorkingWithRemotes_01.png" alt="Working with remotes">
-   </details>        
+   </details>
 </details>
 
 <details>
@@ -140,7 +140,7 @@
   <details>
   <summary><h3>Скриншоты прохождения</h3></summary>
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_html_css_intro/html_css_intro.png" alt="HTML and CSS intro">
-   </details>        
+   </details>
 </details>
 
 
@@ -149,7 +149,7 @@
   <details>
   <summary><h3>Мои впечатления О_о</h3></summary>
     <options>
-      <ul><h3>HTML</h3>
+      <ul><h3>HTML & CSS</h3>
         <h5>Новое для меня...</h5>
         <ul>
           <li>Встали на места многи вопросы по адаптации под разные дисплеи и устройства</li>
@@ -168,6 +168,36 @@
   <summary><h3>Скриншоты прохождения</h3></summary>
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_responsive_web_design/resp-web-design-froggy-game.png" alt="Froggy Game">
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_responsive_web_design/resp-web-design-grid-garden-game.png" alt="Grid Garden">
-   </details>        
+   </details>
 </details>
 
+<details>
+<summary><h2>JS Basics</h2></summary>
+  <details>
+  <summary><h3>Мои впечатления О_о</h3></summary>
+    <options>
+      <ul><h3>JS Basics</h3>
+        <h5>Новое для меня...</h5>
+        <ul>
+          <li>Новое погружение в RegExp - хотя белых пятен еще много.</li>
+          <li>Трансформация "каррирование". Пока не совсем понятны места для использования, но думаю с опытом придет.</li>
+        </ul>
+        <h5>Буду использовать...</h5>
+        <ul>
+          <li>Функциональное программирование</li>
+          <li>Чистые функции для работы с массивами</li>
+          <li>Функции высшего порядка</li>
+        </ul>
+      </ul>
+    </options>
+  </details>
+  <details>
+  <summary><h3>Скриншоты прохождения</h3></summary>
+      <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_js_basics/basic-js.png" alt="Basic JS">
+      <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_js_basics/es6.png" alt="ES6">
+      <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_js_basics/basic-data-structures.png" alt="Basic Data Structures">
+      <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_js_basics/basic-algorithm-scripting.png" alt="Basic Algorithm Scripting">
+      <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_js_basics/functional-programming.png" alt="Functional Programming">
+      <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_js_basics/intermediate-algorithm-scripting.png" alt="Intermediate Algorithm Scripting">
+   </details>
+</details>
