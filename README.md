@@ -193,7 +193,7 @@
       </ul>
     </options>
   </details>
-    <p>Посмотреть можно <a src="https://luckydnepr.github.io/Hooli-style-popup/">ЗДЕСЬ</a></p>
+    <p>Посмотреть можно <a href="https://luckydnepr.github.io/Hooli-style-popup/">ЗДЕСЬ</a></p>
 </details>
 
 <details>
