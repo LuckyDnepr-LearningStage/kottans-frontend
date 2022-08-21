@@ -226,3 +226,29 @@
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_js_basics/intermediate-algorithm-scripting.png" alt="Intermediate Algorithm Scripting">
    </details>
 </details>
+
+<details>
+<summary><h2>Building a Tiny JS World</h2></summary>
+  <details>
+  <summary><h3>Мои впечатления О_о</h3></summary>
+    <options>
+      <ul>
+        <h5>Новое для меня...</h5>
+        <ul>
+          <li>Практическое использование .bind (да, я его тут использовал)</li>
+          <li>Работа с объектами и их свойствами</li>
+        </ul>
+        <h5>Буду использовать...</h5>
+        <ul>
+          <li>Работа с объектами и их свойствами</li>
+          <li>Функции для сбора информации об объекте</li>
+        </ul>
+      </ul>
+    </options>
+  </details>
+  <details>
+  <summary><h3>Код</h3></summary>
+      <h4>Код можно посмотреть <a href="https://github.com/LuckyDnepr/frontend-2022-homeworks/tree/a-tiny-js-world/submissions/LuckyDnepr/a-tiny-js-world">ЗДЕСЬ</a></h4>
+   </details>
+</details>
+
