@@ -248,7 +248,7 @@
   </details>
   <details>
   <summary><h3>Код</h3></summary>
-      <h4>Код можно посмотреть <a href="https://github.com/LuckyDnepr/frontend-2022-homeworks/tree/a-tiny-js-world/submissions/LuckyDnepr/a-tiny-js-world">ЗДЕСЬ</a></h4>
+      <h4>Код можно посмотреть <a href="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_a_tiny_js_world/index.js">ЗДЕСЬ</a></h4>
    </details>
 </details>
 
