@@ -229,7 +229,8 @@
 
 <details>
 <summary><h2>Building a Tiny JS World</h2></summary>
-  <details>
+<p>Выражаю благодарность @artem-trubin и @OleksiyRudenko за code review</p>  
+<details>
   <summary><h3>Мои впечатления О_о</h3></summary>
     <options>
       <ul>
