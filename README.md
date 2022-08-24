@@ -143,7 +143,6 @@
    </details>
 </details>
 
-
 <details>
 <summary><h2>Адаптивний Web Design</h2></summary>
   <details>
@@ -170,7 +169,6 @@
       <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_responsive_web_design/resp-web-design-grid-garden-game.png" alt="Grid Garden">
    </details>
 </details>
-
 
 <details>
 <summary><h2>HTML & CSS practice: Hooli-style Popup</h2></summary>
@@ -228,6 +226,37 @@
 </details>
 
 <details>
+<summary><h2>Document Object Model</h2></summary>
+  <details>
+  <summary><h3>Мои впечатления О_о</h3></summary>
+    <options>
+      <ul>
+        <h5>Новое для меня...</h5>
+        <ul>
+          <li>Практическое использование HTML + CSS + JS на одной странице с нуля.</li>
+          <li>Изменение контента на странице в ответ на действия пользователя без перезагрузки страницы.</li>
+          <li>Реальное использование асинхронных функций async/await.</li>
+        </ul>
+        <h5>Буду использовать...</h5>
+        <ul>
+          <li>Async/await - асинхронность, которой не видно...</li>
+          <li>Обработка Promises c сохранением полученных данных в переменную для дальнейшей работы.</li>
+        </ul>
+      </ul>
+    </options>
+  </details>
+  <details>
+  <summary><h3>Скриншоты прохождения</h3></summary>
+        <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/2caed5e57b9aa9535e8ab94bbcd418f2f8ef7bd1/task_js_dom/intermediate-algorithm-scripting-2.png" alt="Intermediate Algorithm Scripting">
+        <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_js_dom/DOM_Manipulation.png" alt="Document Object Model Manipulation">
+   </details>
+   <details>
+    <summary><h3>Практическое задание</h3></summary>
+    <h4>Посмотреть методы DOM Manipulation в действии можно <a href="https://luckydnepr.github.io/DOM-KottansFE/">ЗДЕСЬ</a></h4>
+</details>
+</details>
+
+<details>
 <summary><h2>Building a Tiny JS World</h2></summary>
   <details>
   <summary><h3>Мои впечатления О_о</h3></summary>
@@ -251,4 +280,3 @@
       <h4>Код можно посмотреть <a href="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_a_tiny_js_world/index.js">ЗДЕСЬ</a></h4>
    </details>
 </details>
-
