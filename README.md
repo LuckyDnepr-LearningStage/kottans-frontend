@@ -314,5 +314,32 @@
       <h4>Код можно посмотреть <a href="https://github.com/LuckyDnepr/classic-frogger-game">ЗДЕСЬ</a></h4>
       <h4>Поиграть можно <a href="https://luckydnepr.github.io/classic-frogger-game/">ЗДЕСЬ</a></h4>
    </details>
+</details>
 
+<details>
+<summary><h2>OOP exercise</h2></summary>
+<h3>Выражаю огромную благодарность @OleksiyRudenko за code review</h3>
+<details>
+  <summary><h3>Мои впечатления О_о</h3></summary>
+    <options>
+      <ul>
+        <h5>Новое для меня...</h5>
+        <ul>
+          <li>Переписывание кода на классах</li>
+          <li>Понимание, что нужно уметь останавливаться где-то в заданном объеме задачи</li>
+          <li>Понимание потока создания экземпляра объекта заданного класса</li>
+          <li>Познакомился, в качестве референса с "композицией" и сравнил ее с "наследованием"</li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString">Вот здесь</a> можно почитать о методе .toString(). Там надо несколько раз читать, после нескольких раз перечитывания. Но это какой-то "magic works".</li>
+        </ul>
+        <h5>Буду использовать...</h5>
+        <ul>
+          <li>Есть стойкое ощещение, что все из вышеперечисленного. Очень уж удобно это все.</li>
+        </ul>
+      </ul>
+    </options>
+  </details>
+  <details>
+  <summary><h3>Код</h3></summary>
+      <h4>Код можно посмотреть <a href="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_oop_exercise/index.js">ЗДЕСЬ</a></h4>
+   </details>
 </details>
