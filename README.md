@@ -318,7 +318,8 @@
 
 <details>
 <summary><h2>OOP exercise</h2></summary>
-<h3>Выражаю огромную благодарность @OleksiyRudenko за code review</h3>
+<h3>Выражаю огромную благодарность @OleksiyRudenko за code review.</h3>
+<p>Более 20 комментариев со ссылками на ресурсы и вопросами к размышлению. Очень много новой информации почерпнул за время review кода.</p>
 <details>
   <summary><h3>Мои впечатления О_о</h3></summary>
     <options>
