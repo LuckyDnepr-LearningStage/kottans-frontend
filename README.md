@@ -248,12 +248,13 @@
   </details>
   <details>
   <summary><h3>Скриншоты прохождения</h3></summary>
-        <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/2caed5e57b9aa9535e8ab94bbcd418f2f8ef7bd1/task_js_dom/intermediate-algorithm-scripting-2.png" alt="Intermediate Algorithm Scripting">
+        <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_js_dom/intermediate-algorithm-scripting-2.png" alt="Intermediate Algorithm Scripting">
         <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_js_dom/DOM_Manipulation.png" alt="Document Object Model Manipulation">
    </details>
    <details>
     <summary><h3>Практическое задание</h3></summary>
     <h4>Посмотреть методы DOM Manipulation в действии можно <a href="https://luckydnepr.github.io/DOM-KottansFE/">ЗДЕСЬ</a></h4>
+    <img src="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_js_dom/DOM_Practice.png" alt="Document Object Model Manipulation">
 </details>
 </details>
 
