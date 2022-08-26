@@ -227,6 +227,7 @@
 
 <details>
 <summary><h2>Document Object Model</h2></summary>
+<h3>Выражаю благодарность @artem-trubin</h3>
   <details>
   <summary><h3>Мои впечатления О_о</h3></summary>
     <options>
@@ -258,7 +259,7 @@
 
 <details>
 <summary><h2>Building a Tiny JS World</h2></summary>
-<p>Выражаю благодарность @artem-trubin и @OleksiyRudenko за code review</p>  
+<h3>Выражаю благодарность @artem-trubin и @OleksiyRudenko за code review</h3>
 <details>
   <summary><h3>Мои впечатления О_о</h3></summary>
     <options>
@@ -280,4 +281,37 @@
   <summary><h3>Код</h3></summary>
       <h4>Код можно посмотреть <a href="https://github.com/LuckyDnepr/kottans-frontend/blob/main/task_a_tiny_js_world/index.js">ЗДЕСЬ</a></h4>
    </details>
+</details>
+
+<details>
+<summary><h2>Object Oriented JS</h2></summary>
+<h3>Выражаю благодарность @OleksiyRudenko за code review</h3>
+<h4><a href="https://www.codewars.com/users/LuckyDnepr">Мой профиль на CodeWars</a></h4>
+<details>
+  <summary><h3>Мои впечатления О_о</h3></summary>
+    <options>
+      <ul>
+        <h5>Новое для меня...</h5>
+        <ul>
+          <li>Создание игры и реализация классов.</li>
+          <li>Понимание работы Engine - каждый отрезок времени мы перерисовываем canvas и пересчитываем состояние Unit-ов</li>
+          <li>Как в данной работе влияет setTimeout на работу всего приложения</li>
+          <li>Реализация управления персонажем не только с клавиатуры, но и при помощи swipe на смартфонах</li>
+          <li>Реализация fullScreenMode для смартфонов</li>
+        </ul>
+        <h5>Буду использовать...</h5>
+        <ul>
+          <li>Создание классов и их методов</li>
+          <li>Реализация swipe</li>
+          <li>Наверное, на этом движке можно еще чего интересного построить</li>
+        </ul>
+      </ul>
+    </options>
+  </details>
+  <details>
+  <summary><h3>Код</h3></summary>
+      <h4>Код можно посмотреть <a href="https://github.com/LuckyDnepr/classic-frogger-game">ЗДЕСЬ</a></h4>
+      <h4>Поиграть можно <a href="https://luckydnepr.github.io/classic-frogger-game/">ЗДЕСЬ</a></h4>
+   </details>
+
 </details>
