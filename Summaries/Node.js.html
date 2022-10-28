@@ -1,846 +1,999 @@
 <!DOCTYPE html>
 
 <head>
-    <style>
-        html {
-            scroll-behavior: smooth;
-            background-color: lightgrey;
-        }
+  <style>
+    html {
+      scroll-behavior: smooth;
+      background-color: lightgrey;
+    }
 
-        body {
-            font-size: 1em;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            width: 60%;
-            margin: auto;
-            color: black;
-            margin-bottom: 4em;
-        }
+    body {
+      font-size: 1em;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      width: 60%;
+      margin: auto;
+      color: black;
+      margin-bottom: 4em;
+    }
 
-        .header {
-            text-align: center;
-            text-decoration: underline;
-            font-size: 1.8em;
-        }
+    .header {
+      text-align: center;
+      text-decoration: underline;
+      font-size: 1.8em;
+    }
 
-        header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-        }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+    }
 
-        .logo {
-            height: 3em;
-        }
+    .logo {
+      height: 3em;
+    }
 
-        nav {
-            font-size: 1.4em;
-        }
+    nav {
+      font-size: 1.4em;
+    }
 
-        a {
-            color: black;
-            transition: color 500ms;
-        }
+    a {
+      color: black;
+      transition: color 500ms;
+    }
 
-        a:hover {
-            color: coral;
-        }
+    a:hover {
+      color: coral;
+    }
 
-        h3 {
-            color: royalblue;
-        }
+    h3 {
+      color: royalblue;
+    }
 
-        .gototop {
-            color: deepskyblue;
-        }
+    .gototop {
+      color: deepskyblue;
+    }
 
-        li {
-            margin: 1em 0;
-            list-style: none;
-        }
+    li {
+      margin: 1em 0;
+      list-style: none;
+    }
 
-        ul {
-            border-bottom: 1px solid grey;
-            border-top: 1px solid grey;
-        }
+    ul {
+      border-bottom: 1px solid grey;
+      border-top: 1px solid grey;
+    }
 
-        em {
-            background-color: rgb(180, 180, 180);
-            font-family: 'Courier New', Courier, monospace;
-            font-style: normal;
-            font-size: 1.1em;
-        }
+    em {
+      background-color: rgb(180, 180, 180);
+      font-family: 'Courier New', Courier, monospace;
+      font-style: normal;
+      font-size: 1.1em;
+    }
 
-        .article::first-letter {
-            font-size: 1.2em;
-            font-weight: 900;
-            margin-left: -1em;
-        }
+    .article::first-letter {
+      font-size: 1.2em;
+      font-weight: 900;
+      margin-left: -1em;
+    }
 
-        strong {
-            font-weight: 600;
-            font-size: 1.2em;
-            font-family: 'Courier New', Courier, monospace;
-        }
-    </style>
+    strong {
+      font-weight: 600;
+      font-size: 1.2em;
+      font-family: 'Courier New', Courier, monospace;
+    }
+  </style>
 
 </head>
 
 <body>
-    <label id="top-of-page"></label>
-    <header>
-        <a href="https://luckydnepr.github.io/kottans-frontend/">К перечню конспектов</a>
-        <p class="header">Конспект по HTML</p>
-        <img class="logo" src="../img/html5-logo.svg" alt="HTML5Logo" height="50%">
-    </header>
-    <nav>
-        <ul>
+  <label id="top-of-page"></label>
+  <header>
+    <a href="https://luckydnepr.github.io/kottans-frontend/">К перечню конспектов</a>
+    <p class="header">Конспект по HTML</p>
+    <img class="logo" src="../img/html5-logo.svg" alt="HTML5Logo" height="50%">
+  </header>
+  <nav>
+    <ul>
 
-            <li>
-                <a href="#item1">1. Стандартные потоки ввода/вывода</a>
-            </li>
-            <li>
-                <a href="#item2">2. Аргументы командной строки</a>
-            </li>
-            <li>
-                <a href="#item3">3. Доступ к файловой системе</a>
-            </li>
-            <li>
-                <a href="#item4">4. Модули</a>
-            </li>
-            <li>
-                <a href="#item5">4.1. Модуль PATH</a>
-            </li>
-            <li>
-                <a href="#item6">4.2. Модуль FS</a>
-            </li>
-            <li>
-                <a href="#item7">4.3. Модуль OS</a>
-            </li>
-            <li>
-                <a href="#item8">4.4. Модуль HTTP</a>
-            </li>
-            <li>
-                <a href="#item9">5. События. Модуль Events</a>
-            </li>
-            <li>
-                <a href="#item10">6. Streams (потоки, стримы)</a>
-            </li>
+      <li>
+        <a href="#item1">1. Стандартные потоки ввода/вывода</a>
+      </li>
+      <li>
+        <a href="#item2">2. Аргументы командной строки</a>
+      </li>
+      <li>
+        <a href="#item3">3. Доступ к файловой системе</a>
+      </li>
+      <li>
+        <a href="#item4">4. Модули</a>
+      </li>
+      <li>
+        <a href="#item5">4.1. Модуль PATH</a>
+      </li>
+      <li>
+        <a href="#item6">4.2. Модуль FS</a>
+      </li>
+      <li>
+        <a href="#item7">4.3. Модуль OS</a>
+      </li>
+      <li>
+        <a href="#item8">4.4. Модуль HTTP</a>
+      </li>
+      <li>
+        <a href="#item9">5. События. Модуль Events</a>
+      </li>
+      <li>
+        <a href="#item10">6. Streams (потоки, стримы)</a>
+      </li>
+      <li>
+        <a href="#item11">6.1. Поток чтения (Readable stream)</a>
+      </li>
+      <li>
+        <a href="#item12">6.2. Поток записи (Writable stream)</a>
+      </li>
+      <li>
+        <a href="#item13">6.3. Объединение потоков чтения-записи</a>
+      </li>
 
+    </ul>
+  </nav>
+
+
+  <section id="item1">
+    <h3>1. Стандартные потоки ввода/вывода</h3>
+    <article>
+      <ol>
+        <li class="article">
+          Для ввода и вывода информации (I/O - input/output) в Node.js существуют стандартные потоки ввода и
+          вывода:
+          <ul>
+            <li>
+              <strong>process.stdin</strong> - поток ввода
+            </li>
+            <li>
+              <strong>process.stdout</strong> - поток вывода
+            </li>
+            <li>
+              <strong>process.stderr</strong> - поток ошибки как разновидность потока вывода
+            </li>
+          </ul>
+        </li>
+
+        <li class="article">
+          Метод <em>stdout.write()</em> принимает в качестве аргумента строку и выводит её в консоль.
+          <ul>
+            <li><strong>const { stdout } = process;</strong></li>
+            <li><strong>stdout.write('Node.js');</strong></li>
+          </ul>
+        </li>
+        <li class="article">
+          При помощи метода <em>.on()</em> мы подписываемся на событие <em>'data'</em> объекта <em>stdin</em>.
+          Метод <em>.on()</em> принимает два параметра - название события <em>'data'</em> и стрелочную
+          функцию-обработчик <em>data => stdout.write(data)</em>, которая выводит в консоль переданные данные.
+          <ul>
+            <li><strong>const { stdin, stdout } = process;</strong></li>
+            <li><strong>stdin.on('data', data => stdout.write(data));</strong></li>
+          </ul>
+        </li>
+        <li class="article">
+          Остановить выполнение программы можно нажав комбинацию славиш <em>Ctrl + C</em> или использовав
+          метод
+          <em>process.exit()</em>.
+          </br>
+          Метод <em>process.exit()</em> при запуске эмитит событие <em>'exit'</em>, подписавшись на которое мы
+          можем выполнить
+          определенные действия перед завершением программы:
+          </br>
+          <ul>
+            <li>
+              <strong>process.on('exit', () => stdout.write('Удачи в изучении Node.js!'));</strong>
+            </li>
+          </ul>
+          <em>process.exit()</em> принимает необязательный аргумент <em>exitCode</em>, представленный целым
+          числом. По умолчанию
+          данный метод запускается с параметром <em>exitCode === 0</em>. Такое завершение процесса означает,
+          что
+          программа выполнена успешно и отработала без ошибок. Завершение процесса с любым другим exitCode,
+          что работа программы завершилась ошибкой. Благодаря этому можно передать разные сообщения на выходе
+          в зависимости от того, сработала программа как нужно, или нет.
+          <ul>
+            <li><strong>const { stdout, stderr } = process;</strong></li>
+            <li></br></li>
+            <li><strong>process.on('exit', code => {</strong></li>
+            <li><strong>if (code === 0) {</strong></li>
+            <li><strong>stdout.write('Всё в порядке');</strong></li>
+            <li><strong>} else {</strong></li>
+            <li><strong>stderr.write(`Что-то пошло не так. Программа завершилась с кодом ${code}`);</strong>
+            </li>
+            <li><strong>}</strong></li>
+            <li><strong>});</strong></li>
+          </ul>
+        </li>
+        <li class="article">
+          Объект <em>data</em> не является строкой, но может быть приведен к строковому представлению.
+          <ul>
+            <li><strong>const { stdin, stdout } = process;</strong></li>
+            <li><strong></br></strong></li>
+            <li><strong>stdin.on('data', data => {</strong></li>
+            <li><strong>const dataStringified = data.toString();</strong></li>
+            <li><strong>stdout.write('Cообщение в верхнем регистре: ');</strong></li>
+            <li><strong>stdout.write(dataStringified.toUpperCase());</strong></li>
+            <li><strong>});</strong></li>
+          </ul>
+        </li>
         </ul>
-    </nav>
+    </article>
+    <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+  </section>
 
+  <section id="item2">
+    <h3>2. Аргументы командной строки</h3>
+    <article>
+      <ul class="article">
+        <li>
+          В Node.js есть возможность запустить файл с определёнными аргументами командной строки. При запуске
+          файла аргументы передаются после его имени. Например, при запуске
+        <li><strong>node test 1 2 3</strong></li>
+        <em>1, 2, 3</em> - это аргументы. Как внутри кода получить доступ к переданным при запуске файла
+        аргументам?
+        Для этого используется свойство глобального объекта process - <em>process.argv</em>
+        </li>
+        <li>
+          Если нужно получить только аргументы, выполним код
+        <li><strong>console.log(process.argv.slice(2));</strong></li>
+        </li>
+      </ul>
+      <ul class="article">
+        Флаги
+        <li>
+          Чтобы иметь возможность отправлять аргументы в любом порядке или пропускать какие-то из них,
+          аргументы
+          командной строки можно пометить. Для этого используются флаги - слова или символы, которые
+          указывают,
+          что за ними следует аргумент командной строки. Перед флагами, как правило, ставят один или два
+          дефиса,
+          чтобы не перепутать их с аргументами. Например,
+        </li>
+        <li><strong>node test -m Hello</strong></li>
+        <li>Чтобы получить аргумент с указанным флагом, напишем код</li>
 
-    <section id="item1">
-        <h3>1. Стандартные потоки ввода/вывода</h3>
-        <article>
-            <ol>
-                <li class="article">
-                    Для ввода и вывода информации (I/O - input/output) в Node.js существуют стандартные потоки ввода и
-                    вывода:
-                    <ul>
-                        <li>
-                            <strong>process.stdin</strong> - поток ввода
-                        </li>
-                        <li>
-                            <strong>process.stdout</strong> - поток вывода
-                        </li>
-                        <li>
-                            <strong>process.stderr</strong> - поток ошибки как разновидность потока вывода
-                        </li>
-                    </ul>
-                </li>
+        <li><strong>const flagIndex = process.argv.indexOf('-m');</strong></li>
+        <li><strong>if (flagIndex !== -1) {</strong></li>
+        <li><strong>const message = process.argv[flagIndex + 1];</strong></li>
+        <li><strong>console.log(message);</strong></li>
+        <li><strong>}</strong></li>
 
-                <li class="article">
-                    Метод <em>stdout.write()</em> принимает в качестве аргумента строку и выводит её в консоль.
-                    <ul>
-                        <li><strong>const { stdout } = process;</strong></li>
-                        <li><strong>stdout.write('Node.js');</strong></li>
-                    </ul>
-                </li>
-                <li class="article">
-                    При помощи метода <em>.on()</em> мы подписываемся на событие <em>'data'</em> объекта <em>stdin</em>.
-                    Метод <em>.on()</em> принимает два параметра - название события <em>'data'</em> и стрелочную
-                    функцию-обработчик <em>data => stdout.write(data)</em>, которая выводит в консоль переданные данные.
-                    <ul>
-                        <li><strong>const { stdin, stdout } = process;</strong></li>
-                        <li><strong>stdin.on('data', data => stdout.write(data));</strong></li>
-                    </ul>
-                </li>
-                <li class="article">
-                    Остановить выполнение программы можно нажав комбинацию славиш <em>Ctrl + C</em> или использовав
-                    метод
-                    <em>process.exit()</em>.
-                    </br>
-                    Метод <em>process.exit()</em> при запуске эмитит событие <em>'exit'</em>, подписавшись на которое мы
-                    можем выполнить
-                    определенные действия перед завершением программы:
-                    </br>
-                    <ul>
-                        <li>
-                            <strong>process.on('exit', () => stdout.write('Удачи в изучении Node.js!'));</strong>
-                        </li>
-                    </ul>
-                    <em>process.exit()</em> принимает необязательный аргумент <em>exitCode</em>, представленный целым
-                    числом. По умолчанию
-                    данный метод запускается с параметром <em>exitCode === 0</em>. Такое завершение процесса означает,
-                    что
-                    программа выполнена успешно и отработала без ошибок. Завершение процесса с любым другим exitCode,
-                    что работа программы завершилась ошибкой. Благодаря этому можно передать разные сообщения на выходе
-                    в зависимости от того, сработала программа как нужно, или нет.
-                    <ul>
-                        <li><strong>const { stdout, stderr } = process;</strong></li>
-                        <li></br></li>
-                        <li><strong>process.on('exit', code => {</strong></li>
-                        <li><strong>if (code === 0) {</strong></li>
-                        <li><strong>stdout.write('Всё в порядке');</strong></li>
-                        <li><strong>} else {</strong></li>
-                        <li><strong>stderr.write(`Что-то пошло не так. Программа завершилась с кодом ${code}`);</strong>
-                        </li>
-                        <li><strong>}</strong></li>
-                        <li><strong>});</strong></li>
-                    </ul>
-                </li>
-                <li class="article">
-                    Объект <em>data</em> не является строкой, но может быть приведен к строковому представлению.
-                    <ul>
-                        <li><strong>const { stdin, stdout } = process;</strong></li>
-                        <li><strong></br></strong></li>
-                        <li><strong>stdin.on('data', data => {</strong></li>
-                        <li><strong>const dataStringified = data.toString();</strong></li>
-                        <li><strong>stdout.write('Cообщение в верхнем регистре: ');</strong></li>
-                        <li><strong>stdout.write(dataStringified.toUpperCase());</strong></li>
-                        <li><strong>});</strong></li>
-                    </ul>
-                </li>
-                </ul>
-        </article>
-        <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
-    </section>
+      </ul>
+      <ul class="article">
+        Переменные окружения
+        <li>
+          Иногда нам нужно снаружи передать в код некое значение, которое будет использоваться нашим
+          приложением.
+          Например, мы хотим реализовать различное поведение приложения при запуске на "боевом" сервере и в
+          процессе разработки. В этом нам могут помочь переменные окружения. Переменные окружения имеют
+          синтаксис
+          вида <em>variable_name=variable_value</em> и размещаются перед node ...
+        </li>
+        <li>
+          Доступ к таким переменным внутри кода можно получить через <em>process.env</em>
+        </li>
+      </ul>
+    </article>
+    <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+  </section>
 
-    <section id="item2">
-        <h3>2. Аргументы командной строки</h3>
-        <article>
-            <ul class="article">
-                <li>
-                    В Node.js есть возможность запустить файл с определёнными аргументами командной строки. При запуске
-                    файла аргументы передаются после его имени. Например, при запуске
-                <li><strong>node test 1 2 3</strong></li>
-                <em>1, 2, 3</em> - это аргументы. Как внутри кода получить доступ к переданным при запуске файла
-                аргументам?
-                Для этого используется свойство глобального объекта process - <em>process.argv</em>
-                </li>
-                <li>
-                    Если нужно получить только аргументы, выполним код
-                <li><strong>console.log(process.argv.slice(2));</strong></li>
-                </li>
-            </ul>
-            <ul class="article">
-                Флаги
-                <li>
-                    Чтобы иметь возможность отправлять аргументы в любом порядке или пропускать какие-то из них,
-                    аргументы
-                    командной строки можно пометить. Для этого используются флаги - слова или символы, которые
-                    указывают,
-                    что за ними следует аргумент командной строки. Перед флагами, как правило, ставят один или два
-                    дефиса,
-                    чтобы не перепутать их с аргументами. Например,
-                </li>
-                <li><strong>node test -m Hello</strong></li>
-                <li>Чтобы получить аргумент с указанным флагом, напишем код</li>
+  <section id="item3">
+    <h3>3. Доступ к файловой системе</h3>
+    <article>
+      <ul class="article">
+        В отличие от браузерного JavaScript, у Node.js есть доступ к файловой системе.
+        Например, мы легко можем узнать абсолютный путь к директории, в которой находится наш файл. Для этого
+        напишем:
+        <li><strong>console.log(__dirname);</strong></li>
+        <li>В консоль выведется абсолютный путь к директории с файлом.</li>
+        <li>Теперь выведем абсолютный путь к файлу.</li>
+        <li><strong>console.log(__filename);</strong></li>
+        Теперь в консоль выводится абсолютный путь к файлу вместе с его именем.
+      </ul>
+    </article>
+    <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+  </section>
 
-                <li><strong>const flagIndex = process.argv.indexOf('-m');</strong></li>
-                <li><strong>if (flagIndex !== -1) {</strong></li>
-                <li><strong>const message = process.argv[flagIndex + 1];</strong></li>
-                <li><strong>console.log(message);</strong></li>
-                <li><strong>}</strong></li>
+  <section id="item4">
+    <h3>4. Модули</h3>
+    <article>
+      <ul class="article">
+        Node.js любой файл воспринимает как модуль. В Node.js на данный момент используются 2 системы модулей:
+        <em>CommonJS</em> (модули, используемые в Node.js по умолчанию, появились раньше) и ECMAScript модули
+        (реализуют
+        функционал JS, впервые появившийся в спецификации ECMAScript 2015). Они имеют существенные отличия друг
+        от друга. В рамках данных материалов мы используем только CommonJS модули. Глобальных переменных вроде
+        __dirname, __filename, process в Node.js <a href="https://nodejs.org/dist/latest-v14.x/docs/api/globals.html">не
+          так много</a>. Остальной
+        функционал реализован в виде
+        подключаемых модулей.
+        Преимущества использования модулей в Node.js:
+        <ol>
 
-            </ul>
-            <ul class="article">
-                Переменные окружения
-                <li>
-                    Иногда нам нужно снаружи передать в код некое значение, которое будет использоваться нашим
-                    приложением.
-                    Например, мы хотим реализовать различное поведение приложения при запуске на "боевом" сервере и в
-                    процессе разработки. В этом нам могут помочь переменные окружения. Переменные окружения имеют
-                    синтаксис
-                    вида <em>variable_name=variable_value</em> и размещаются перед node ...
-                </li>
-                <li>
-                    Доступ к таким переменным внутри кода можно получить через <em>process.env</em>
-                </li>
-            </ul>
-        </article>
-        <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
-    </section>
+          <li>
+            Лучшее структурирование кода — код, разбитый на модули, гораздо легче для понимания, поддержки,
+            тестирования
+          </li>
+          <il>
+            Облегчение переиспользования кода — правильно написанный и документированный модуль легко может
+            быть
+            использован в нескольких местах в одном проекте, а также в разных проектах
+          </il>
+          <li>
+            Инкапсуляция — содержимое модуля инкапсулировано, т.е. доступно исключительно внутри модуля.
+            Разработчик
+            сам решает, что импортировать в модуль и что экспортировать за пределы модуля
+          </li>
+          <li>
+            Благодаря кэшированию модулей их многократный импорт не приводит к дополнительным издержкам
+            производительности
+          </li>
+        </ol>
 
-    <section id="item3">
-        <h3>3. Доступ к файловой системе</h3>
-        <article>
-            <ul class="article">
-                В отличие от браузерного JavaScript, у Node.js есть доступ к файловой системе.
-                Например, мы легко можем узнать абсолютный путь к директории, в которой находится наш файл. Для этого
-                напишем:
-                <li><strong>console.log(__dirname);</strong></li>
-                <li>В консоль выведется абсолютный путь к директории с файлом.</li>
-                <li>Теперь выведем абсолютный путь к файлу.</li>
-                <li><strong>console.log(__filename);</strong></li>
-                Теперь в консоль выводится абсолютный путь к файлу вместе с его именем.
-            </ul>
-        </article>
-        <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
-    </section>
+        <p style="font-weight: 800;">Упрощенно, модули в Node.js можно разделить на 3 типа:</p>
 
-    <section id="item4">
-        <h3>4. Модули</h3>
-        <article>
-            <ul class="article">
-                Node.js любой файл воспринимает как модуль. В Node.js на данный момент используются 2 системы модулей:
-                <em>CommonJS</em> (модули, используемые в Node.js по умолчанию, появились раньше) и ECMAScript модули
-                (реализуют
-                функционал JS, впервые появившийся в спецификации ECMAScript 2015). Они имеют существенные отличия друг
-                от друга. В рамках данных материалов мы используем только CommonJS модули. Глобальных переменных вроде
-                __dirname, __filename, process в Node.js <a
-                    href="https://nodejs.org/dist/latest-v14.x/docs/api/globals.html">не так много</a>. Остальной
-                функционал реализован в виде
-                подключаемых модулей.
-                Преимущества использования модулей в Node.js:
-                <ol>
+        <ol>
+          <li><strong>Стандартные модули (core modules), которые мы получаем "из коробки", устанавливая
+              Node.js на компьютер.</strong></li>
+          <li><strong>Модули-пакеты</strong></li>
+          <li><strong>Модули, которые разработчик создаёт самостоятельно</strong></li>
+        </ol>
 
-                    <li>
-                        Лучшее структурирование кода — код, разбитый на модули, гораздо легче для понимания, поддержки,
-                        тестирования
-                    </li>
-                    <il>
-                        Облегчение переиспользования кода — правильно написанный и документированный модуль легко может
-                        быть
-                        использован в нескольких местах в одном проекте, а также в разных проектах
-                    </il>
-                    <li>
-                        Инкапсуляция — содержимое модуля инкапсулировано, т.е. доступно исключительно внутри модуля.
-                        Разработчик
-                        сам решает, что импортировать в модуль и что экспортировать за пределы модуля
-                    </li>
-                    <li>
-                        Благодаря кэшированию модулей их многократный импорт не приводит к дополнительным издержкам
-                        производительности
-                    </li>
-                </ol>
+        <ul class="article">
+          Стандартные модули
+          <li>
+            Они уже скомпилированы в двоичный код и описаны в документации. Перечень стандартных модулей.
+            Стандартные модули достаточно подключить и можно с ними работать.
+          </li>
 
-                <p style="font-weight: 800;">Упрощенно, модули в Node.js можно разделить на 3 типа:</p>
+          <li>Для подключения модуля используется функция <em>require()</em></li>
+        </ul>
+        <ul class="article">
+          Модули-пакеты (<em>Packages</em>)
+          К модулям-пакетам относятся папки с кодом, описываемые при помощи находящегося в них файла
+          <em>package.json</em>. С модулями-пакетами удобно работать при помощи менеджеров пакетов, таких как
+          npm или
+          yarn. Если мы хотим использовать уже написанные кем-то модули-пакеты (частый способ использования
+          кода других разработчиков), их нужно установить, затем подключить, затем использовать.
+          Установка модуля-пакета при помощи npm осуществляется командой
 
-                <ol>
-                    <li><strong>Стандартные модули (core modules), которые мы получаем "из коробки", устанавливая
-                            Node.js на компьютер.</strong></li>
-                    <li><strong>Модули-пакеты</strong></li>
-                    <li><strong>Модули, которые разработчик создаёт самостоятельно</strong></li>
-                </ol>
+          <li><strong>npm install имя_модуля</strong></li>
+        </ul>
+        <ul class="article">
+          Модули, которые разработчик создаёт самостоятельно
+          <li>
+            Создание модуля начинается с создания отдельного js-файла, в котором пишется код. Если модуль
+            должен
+            экспортировать что-либо наружу, это делается при помощи записи экспортируемого значения в
+            качестве
+            свойства специального объекта <em>module.exports</em>, либо его перезаписи. Экспортируемые из
+            одних модулей
+            значения мы можем импортировать в других модулях. Как и в случае с другими типами модулей,
+            импорт
+            осуществляется при помощи функции <em>require()</em>, только в качестве аргумента функции вместо
+            имени модуля
+            указываем путь к файлу.
+          </li>
+        </ul>
+        <ul class="article">
+          Создание Node.js-приложения
+          <li>
+            Создадим новый проект. Для этого создадим папку проекта, откроем её в VS Code и в терминале
+            выполним
+            команду
+          </li>
+          <li><strong>npm init -y</strong></li>
+          Параметр <em>-y</em> (<em>Yes</em>) означает, что мы соглашаемся со всеми настройками проекта по
+          умолчанию.
+          В папке проекта появляется файл package.json, который описывает созданное приложение.
+        </ul>
+      </ul>
+    </article>
+    <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+  </section>
 
-                <ul class="article">
-                    Стандартные модули
-                    <li>
-                        Они уже скомпилированы в двоичный код и описаны в документации. Перечень стандартных модулей.
-                        Стандартные модули достаточно подключить и можно с ними работать.
-                    </li>
-
-                    <li>Для подключения модуля используется функция <em>require()</em></li>
-                </ul>
-                <ul class="article">
-                    Модули-пакеты (<em>Packages</em>)
-                    К модулям-пакетам относятся папки с кодом, описываемые при помощи находящегося в них файла
-                    <em>package.json</em>. С модулями-пакетами удобно работать при помощи менеджеров пакетов, таких как
-                    npm или
-                    yarn. Если мы хотим использовать уже написанные кем-то модули-пакеты (частый способ использования
-                    кода других разработчиков), их нужно установить, затем подключить, затем использовать.
-                    Установка модуля-пакета при помощи npm осуществляется командой
-
-                    <li><strong>npm install имя_модуля</strong></li>
-                </ul>
-                <ul class="article">
-                    Модули, которые разработчик создаёт самостоятельно
-                    <li>
-                        Создание модуля начинается с создания отдельного js-файла, в котором пишется код. Если модуль
-                        должен
-                        экспортировать что-либо наружу, это делается при помощи записи экспортируемого значения в
-                        качестве
-                        свойства специального объекта <em>module.exports</em>, либо его перезаписи. Экспортируемые из
-                        одних модулей
-                        значения мы можем импортировать в других модулях. Как и в случае с другими типами модулей,
-                        импорт
-                        осуществляется при помощи функции <em>require()</em>, только в качестве аргумента функции вместо
-                        имени модуля
-                        указываем путь к файлу.
-                    </li>
-                </ul>
-                <ul class="article">
-                    Создание Node.js-приложения
-                    <li>
-                        Создадим новый проект. Для этого создадим папку проекта, откроем её в VS Code и в терминале
-                        выполним
-                        команду
-                    </li>
-                    <li><strong>npm init -y</strong></li>
-                    Параметр <em>-y</em> (<em>Yes</em>) означает, что мы соглашаемся со всеми настройками проекта по
-                    умолчанию.
-                    В папке проекта появляется файл package.json, который описывает созданное приложение.
-                </ul>
-            </ul>
-        </article>
-        <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
-    </section>
-
-    <section id="item5>
+  <section id="item5>
         <h3>4.1. Модуль PATH</h3>
         <article>
             <ul class=" article">
+    <li>
+      Модуль path предназначен для того, чтобы работать с путями в Node.js. При помощи него можно получить
+      имя
+      файла, расширение файла, имя папки, указать путь к файлу.
+    </li>
+    <li>Чтобы использовать <em>path</em>, его необходимо подключить:</li>
+    <li><strong>const path = require('path');</strong></li>
+    Информацию о свойствах и методах path можно найти в <a
+      href="https://nodejs.org/docs/latest-v14.x/api/path.html">документации Node.js</a>.
+    <ul class="article" style="margin-top: 2em;">
+      Получение данных о файле:
+      <li><em>// для файла, расположенного по адресу C:\Users\Admin\Desktop\nodejs-basic\index.js</em>
+      </li>
+      <li><strong>const path = require('path');</strong></li>
+      <li><strong>console.log(path.basename(__filename))</strong> <em>// index.js - имя файла на Windows,
+          полный путь к файлу на POSIX-системах</em></li>
+      <li><strong>console.log(path.dirname(__filename))</strong> <em>//
+          C:\Users\Admin\Desktop\nodejs-basic - название папки</em></li>
+      <li><strong>console.log(path.extname(__filename))</strong> <em>// .js - расширение файла</em></li>
+      <li><strong>console.log(path.parse(__filename));</strong> <em>// возвращает объект в котором
+          указывается корень диска, имя папки, имя файла, расширение файла, имя файла без
+          расширения</em></li>
+    </ul>
+    <ul class="article" style="margin-top: 2em;">
+      Конкатенация путей:
+      <li><em>// вернет C:\Users\Admin\Desktop\nodejs-basic\test\second.html</em></li>
+      <li><strong>console.log(path.join(__dirname, 'test', 'second.html'));</strong></li>
+      <em>path.join()</em> объединяет заданные сегменты пути вместе, используя в качестве разделителя
+      разделитель
+      <li>
+        данной конкретной платформы (для Linux - прямой слэш, для Windows - обратный слэш), результат -
+        относительный путь
+      </li>
+
+      <li><strong>const path = require('path');</strong></li>
+      <li><strong>console.log(path.resolve(__dirname, './test', '/second.html'));</strong></li>
+
+      <li>
+        <em>path.resolve()</em> преобразует последовательность путей или сегментов пути в абсолютный
+        путь справа
+        налево и нормализует его: если в некоторых сегментах пути указываются слэши, а в некоторых нет,
+        всё
+        равно будет сгенерирован правильный путь.
+      </li>
+    </ul>
+    </ul>
+    </article>
+    <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+  </section>
+
+  <section id="item6">
+    <h3>4.2. Модуль FS</h3>
+    <article>
+      <ul class="article">
         <li>
-            Модуль path предназначен для того, чтобы работать с путями в Node.js. При помощи него можно получить
-            имя
-            файла, расширение файла, имя папки, указать путь к файлу.
+        <li>
+          Модуль <em>fs (file system)</em> нужен для работы с файлами и папками. Он умеет создавать и удалять
+          файлы и
+          папки, переименовывать их, записывать и считывать данные.
         </li>
-        <li>Чтобы использовать <em>path</em>, его необходимо подключить:</li>
-        <li><strong>const path = require('path');</strong></li>
-        Информацию о свойствах и методах path можно найти в <a
-            href="https://nodejs.org/docs/latest-v14.x/api/path.html">документации Node.js</a>.
+        <li>Импортируем <em>fs</em>:</li>
+
+        <li><strong>const fs = require('fs')</strong></li>
+        Создадим папку. Для этого есть два метода:
+        <li><em>асинхронный</em> <strong>fs.mkdir</strong></li>
+        <li><em>синхронный</em> <strong>fs.mkdirSync</strong></li>
+        <li>
+          При работе с файловой системой рекомендуется использовать асинхронные методы, которые не блокируют
+          поток выполнения. Если папка или файл будут создаваться синхронно, выполнение кода остановится, пока
+          они не будут созданы. Такие паузы в выполнении кода нежелательны.
+        </li>
+        </li>
         <ul class="article" style="margin-top: 2em;">
-            Получение данных о файле:
-            <li><em>// для файла, расположенного по адресу C:\Users\Admin\Desktop\nodejs-basic\index.js</em>
-            </li>
-            <li><strong>const path = require('path');</strong></li>
-            <li><strong>console.log(path.basename(__filename))</strong> <em>// index.js - имя файла на Windows,
-                    полный путь к файлу на POSIX-системах</em></li>
-            <li><strong>console.log(path.dirname(__filename))</strong> <em>//
-                    C:\Users\Admin\Desktop\nodejs-basic - название папки</em></li>
-            <li><strong>console.log(path.extname(__filename))</strong> <em>// .js - расширение файла</em></li>
-            <li><strong>console.log(path.parse(__filename));</strong> <em>// возвращает объект в котором
-                    указывается корень диска, имя папки, имя файла, расширение файла, имя файла без
-                    расширения</em></li>
+          <li>Создадим папку notes в текущей директории</li>
+
+          <li><strong>const fs = require('fs');</strong></li>
+          <li><strong>const path = require('path');</strong></li>
+
+          <li><strong>fs.mkdir(path.join(__dirname, 'notes'), err => {</strong></li>
+          <li>
+            <strong>if (err) throw err;</strong>
+            <strong>console.log('Папка была создана');</strong>
+          </li>
+          <li><strong>});</strong></li>
         </ul>
         <ul class="article" style="margin-top: 2em;">
-            Конкатенация путей:
-            <li><em>// вернет C:\Users\Admin\Desktop\nodejs-basic\test\second.html</em></li>
-            <li><strong>console.log(path.join(__dirname, 'test', 'second.html'));</strong></li>
-            <em>path.join()</em> объединяет заданные сегменты пути вместе, используя в качестве разделителя
-            разделитель
-            <li>
-                данной конкретной платформы (для Linux - прямой слэш, для Windows - обратный слэш), результат -
-                относительный путь
-            </li>
+          <li>Создадим файл mynotes.txt, содержащий текст Hello world внутри папки notes</li>
 
-            <li><strong>const path = require('path');</strong></li>
-            <li><strong>console.log(path.resolve(__dirname, './test', '/second.html'));</strong></li>
+          <li><strong>const fs = require('fs');</strong></li>
+          <li><strong>const path = require('path');</strong></li>
 
-            <li>
-                <em>path.resolve()</em> преобразует последовательность путей или сегментов пути в абсолютный
-                путь справа
-                налево и нормализует его: если в некоторых сегментах пути указываются слэши, а в некоторых нет,
-                всё
-                равно будет сгенерирован правильный путь.
-            </li>
+          <li><strong>fs.writeFile(</strong></li>
+          <li><strong>path.join(__dirname, 'notes', 'mynotes.txt'),</strong></li>
+          <li><strong>'Hello world',</strong></li>
+          <li><strong>(err) => {</strong></li>
+          <li><strong>if (err) throw err;</strong></li>
+          <li><strong>console.log('Файл был создан');</strong></li>
+          <li><strong>}</strong></li>
+          <li><strong>);</strong></li>
         </ul>
+
+        <ul class="article" style="margin-top: 2em;">
+          <li>Дополним файл, записав в него ещё какую-то информацию</li>
+
+          <li><strong>const fs = require('fs');</strong></li>
+          <li><strong>const path = require('path');</strong></li>
+
+          <li><strong>fs.appendFile(</strong></li>
+          <li><strong>path.join(__dirname, 'notes', 'mynotes.txt'),</strong></li>
+          <li><strong>' From append file',</strong></li>
+          <li><strong>err => {</strong></li>
+          <li><strong>if (err) throw err;</strong></li>
+          <li><strong>console.log('Файл был изменен');</strong></li>
+          <li><strong>}</strong></li>
+          <li><strong>);</strong></li>
         </ul>
-        </article>
-        <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
-    </section>
+        <ul class="article" style="margin-top: 2em;">
 
-    <section id="item6">
-        <h3>4.2. Модуль FS</h3>
-        <article>
-            <ul class="article">
-                <li>
-                <li>
-                    Модуль <em>fs (file system)</em> нужен для работы с файлами и папками. Он умеет создавать и удалять
-                    файлы и
-                    папки, переименовывать их, записывать и считывать данные.
-                </li>
-                <li>Импортируем <em>fs</em>:</li>
+          <li>Прочитаем информацию из файла</li>
 
-                <li><strong>const fs = require('fs')</strong></li>
-                Создадим папку. Для этого есть два метода:
-                <li><em>асинхронный</em> <strong>fs.mkdir</strong></li>
-                <li><em>синхронный</em> <strong>fs.mkdirSync</strong></li>
-                <li>
-                    При работе с файловой системой рекомендуется использовать асинхронные методы, которые не блокируют
-                    поток выполнения. Если папка или файл будут создаваться синхронно, выполнение кода остановится, пока
-                    они не будут созданы. Такие паузы в выполнении кода нежелательны.
-                </li>
-                </li>
-                <ul class="article" style="margin-top: 2em;">
-                    <li>Создадим папку notes в текущей директории</li>
+          <li><strong> fs = require('fs');</strong></li>
+          <li><strong> path = require('path');</strong></li>
 
-                    <li><strong>const fs = require('fs');</strong></li>
-                    <li><strong>const path = require('path');</strong></li>
+          <li><strong>fs.readFile(</strong></li>
+          <li><strong>path.join(__dirname, 'notes', 'mynotes.txt'),</strong></li>
+          <li><strong>'utf-8',</strong></li>
+          <li><strong>(err, data) => {</strong></li>
+          <li><strong>if (err) throw err;</strong></li>
+          <li><strong> console.log(data);</strong></li>
+          <li><strong>}</strong></li>
+          <li><strong>);</strong></li>
+        </ul>
+        <ul class="article" style="margin-top: 2em;">
 
-                    <li><strong>fs.mkdir(path.join(__dirname, 'notes'), err => {</strong></li>
-                    <li>
-                        <strong>if (err) throw err;</strong>
-                        <strong>console.log('Папка была создана');</strong>
-                    </li>
-                    <li><strong>});</strong></li>
-                </ul>
-                <ul class="article" style="margin-top: 2em;">
-                    <li>Создадим файл mynotes.txt, содержащий текст Hello world внутри папки notes</li>
+          <li>Переименуем файл</li>
 
-                    <li><strong>const fs = require('fs');</strong></li>
-                    <li><strong>const path = require('path');</strong></li>
+          <li><strong> fs = require('fs');</strong></li>
+          <li><strong> path = require('path');</strong></li>
 
-                    <li><strong>fs.writeFile(</strong></li>
-                    <li><strong>path.join(__dirname, 'notes', 'mynotes.txt'),</strong></li>
-                    <li><strong>'Hello world',</strong></li>
-                    <li><strong>(err) => {</strong></li>
-                    <li><strong>if (err) throw err;</strong></li>
-                    <li><strong>console.log('Файл был создан');</strong></li>
-                    <li><strong>}</strong></li>
-                    <li><strong>);</strong></li>
-                </ul>
+          <li><strong>fs.rename(</strong></li>
+          <li><strong>path.join(__dirname, 'notes', 'mynotes.txt'),</strong></li>
+          <li><strong>path.join(__dirname, 'notes', 'notes.txt'),</strong></li>
+          <li><strong>err => {</strong></li>
+          <li><strong>if (err) throw err;</strong></li>
+          <li><strong>console.log('Файл переименован');</strong></li>
+          <li><strong>}</strong></li>
+          <li><strong>);</strong></li>
+        </ul>
+      </ul>
+    </article>
+    <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+  </section>
 
-                <ul class="article" style="margin-top: 2em;">
-                    <li>Дополним файл, записав в него ещё какую-то информацию</li>
 
-                    <li><strong>const fs = require('fs');</strong></li>
-                    <li><strong>const path = require('path');</strong></li>
+  <section id="item7">
+    <h3>4.3. Модуль OS</h3>
+    <article>
+      <ul class="article">
+        Модуль <em>os (operating system)</em> предоставляет данные об операционной системе пользователя
 
-                    <li><strong>fs.appendFile(</strong></li>
-                    <li><strong>path.join(__dirname, 'notes', 'mynotes.txt'),</strong></li>
-                    <li><strong>' From append file',</strong></li>
-                    <li><strong>err => {</strong></li>
-                    <li><strong>if (err) throw err;</strong></li>
-                    <li><strong>console.log('Файл был изменен');</strong></li>
-                    <li><strong>}</strong></li>
-                    <li><strong>);</strong></li>
-                </ul>
-                <ul class="article" style="margin-top: 2em;">
+        <li><strong>const os = require('os');</strong></li>
 
-                    <li>Прочитаем информацию из файла</li>
+        <li><em>// Платформа</em></li>
+        <li><strong>console.log(os.platform());</strong></li>
 
-                    <li><strong> fs = require('fs');</strong></li>
-                    <li><strong> path = require('path');</strong></li>
+        <li><em>// Архитектура</em></li>
+        <li><strong>console.log(os.arch());</strong></li>
 
-                    <li><strong>fs.readFile(</strong></li>
-                    <li><strong>path.join(__dirname, 'notes', 'mynotes.txt'),</strong></li>
-                    <li><strong>'utf-8',</strong></li>
-                    <li><strong>(err, data) => {</strong></li>
-                    <li><strong>if (err) throw err;</strong></li>
-                    <li><strong> console.log(data);</strong></li>
-                    <li><strong>}</strong></li>
-                    <li><strong>);</strong></li>
-                </ul>
-                <ul class="article" style="margin-top: 2em;">
+        <li><em>// Информация о CPU</em></li>
+        <li><strong>console.log(os.cpus());</strong></li>
 
-                    <li>Переименуем файл</li>
+        <li><em>// Общий объём памяти</em></li>
+        <li><strong>console.log(os.totalmem());</strong></li>
 
-                    <li><strong> fs = require('fs');</strong></li>
-                    <li><strong> path = require('path');</strong></li>
+        <li><em>// Объём свободной памяти</em></li>
+        <li><strong>console.log(os.freemem());</strong></li>
 
-                    <li><strong>fs.rename(</strong></li>
-                    <li><strong>path.join(__dirname, 'notes', 'mynotes.txt'),</strong></li>
-                    <li><strong>path.join(__dirname, 'notes', 'notes.txt'),</strong></li>
-                    <li><strong>err => {</strong></li>
-                    <li><strong>if (err) throw err;</strong></li>
-                    <li><strong>console.log('Файл переименован');</strong></li>
-                    <li><strong>}</strong></li>
-                    <li><strong>);</strong></li>
-                </ul>
+        <li><em>// Корневая директория</em></li>
+        <li><strong>console.log(os.homedir());</strong></li>
+
+        <li><em>// Время работы системы</em></li>
+        <li><strong>console.log(os.uptime());</strong></li>
+
+        <li><em>// Символ окончания строки в данной системе</em></li>
+        <li><strong>console.log(os.EOL);</strong></li>
+      </ul>
+    </article>
+    <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+  </section>
+
+  <section id="item8">
+    <h3>4.4. Модуль HTTP</h3>
+    <article>
+      <ul class="article">
+        В Node.js для работы с сервером и протоколом HTTP используется модуль http
+        <ul>
+          <li><strong>const http = require('http');</strong></li>
+          <li><strong>const PORT = 3000;</strong></li>
+          <li><strong>const requestHandler = (request, response) => {</strong></li>
+          <li><strong>const { method, url } = request;</strong></li>
+          <li><strong>console.log(`Получен ${method}-запрос на ${url}`);</strong></li>
+          <li><strong>response.write('Hello Node.js');</strong></li>
+          <li><strong>response.end('Bye!');</strong></li>
+          <li><strong>};</strong></li>
+          <li><strong>const server = http.createServer(requestHandler);</strong></li>
+          <li><strong>server.listen(PORT, 'localhost', () => {</strong></li>
+          <li><strong>console.log(`Сервер запущен на порту ${PORT}`);</strong></li>
+          <li><strong>});</strong></li>
+        </ul>
+        <li>Рассмотрим этот код.</li>
+        <li>Импортируем модуль http</li>
+        <ul>
+          <li><strong>const http = require('http');</strong></li>
+        </ul>
+        <li>Используя его метод <em>createServer()</em>, создаем http-сервер:</li>
+        <ul>
+          <li><strong>const requestHandler = (request, response) => {</strong></li>
+          <li><strong>const { method, url } = request;</strong></li>
+          <li><strong>console.log(`Получен ${method}-запрос на ${url}`);</strong></li>
+          <li><strong>response.write('Hello Node.js');</strong></li>
+          <li><strong>response.end('Bye!');</strong></li>
+          <li><strong>};</strong></li>
+
+          <li><strong>const server = http.createServer(requestHandler);</strong></li>
+        </ul>
+
+        В качестве колбэка данный метод получает функцию requestHandler с двумя параметрами <em>request</em> и
+        <em>response</em>
+        (имена могут быть любыми другими)
+        <ul>
+          <li><em>request</em> хранит информацию о запросе</li>
+          <li><em>response</em> отвечает за отправку ответа</li>
+        </ul>
+        <li>
+          Наш <em>requestHandler</em> выводит в консоль метод запроса и адрес запрашиваемого ресурса, а также
+          в ответ
+          отправляет сообщения <em>Hello from Node.js</em> и <em>Bye!</em>.
+        </li>
+        <li>
+          <ul>
+            <li><strong>response.write()</strong></li>
+          </ul>
+          пишет в тело ответа сообщение, а <em>respone.end()</em>
+          сообщает серверу, что заголовки и тело
+          ответа записаны и его можно отправлять.
+        </li>
+        <li>
+          <strong style="font-weight: 800; color: red">NB!</strong> <em>response.end()</em> должен завершать
+          каждый ответ. Без этого обработка запроса "зависнет" — запрос будет
+          получен, но не будет до конца обработан.
+        </li>
+        <li>
+          Метод <em>listen</em> сервера запускает его и он начинает прослушивать определенный порт в ожидании
+          соединений.
+          Он имеет несколько сигнатур, в нашем случае он принимает три параметра: локальный порт, локальный
+          адрес
+          и колбэк-функцию, которая запускается при начале прослушивания подключений.
+        </li>
+        <ul>
+          <li><strong>server.listen(PORT, 'localhost', () => {</strong></li>
+          <li><strong>console.log(`Сервер запущен на порту ${PORT}`);</strong></li>
+          <li><strong>});</strong></li>
+        </ul>
+        <ul>
+          В методах <em>write</em> и <em>end</em> можно передать строку, которая содержит HTML-теги с инлайн
+          стилями.
+          Эти теги будут корректно обработаны браузером
+          <ul>
+
+            <li><strong>const http = require('http');</strong></li>
+
+            <li><strong>const PORT = 3000;</strong></li>
+
+            <li><strong>const requestHandler = (request, response) => {</strong></li>
+            <ul>
+              <li><strong>const { method, url } = request;</strong></li>
+              <li><strong>const heading = `&lt;h1 style="color: red"&gt;${url} page&lt;/h1&gt;`;</strong>
+              </li>
+              <li><strong>const content = `&lt;div style="background-color: green; width: 100px; height:
+                  100px"&gt;Green block 100px x 100px&lt;/div&gt;`;</strong></li>
+              <li><strong>console.log(`Получен ${method}-запрос на ${url}`);</strong></li>
+              <li><strong>response.write(heading);</strong></li>
+              <li><strong>response.end(content);</strong></li>
             </ul>
-        </article>
-        <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
-    </section>
+            <li><strong>};</strong></li>
 
+            <li><strong>const server = http.createServer(requestHandler);</strong></li>
 
-    <section id="item7">
-        <h3>4.3. Модуль OS</h3>
-        <article>
-            <ul class="article">
-                Модуль <em>os (operating system)</em> предоставляет данные об операционной системе пользователя
-
-                <li><strong>const os = require('os');</strong></li>
-
-                <li><em>// Платформа</em></li>
-                <li><strong>console.log(os.platform());</strong></li>
-
-                <li><em>// Архитектура</em></li>
-                <li><strong>console.log(os.arch());</strong></li>
-
-                <li><em>// Информация о CPU</em></li>
-                <li><strong>console.log(os.cpus());</strong></li>
-
-                <li><em>// Общий объём памяти</em></li>
-                <li><strong>console.log(os.totalmem());</strong></li>
-
-                <li><em>// Объём свободной памяти</em></li>
-                <li><strong>console.log(os.freemem());</strong></li>
-
-                <li><em>// Корневая директория</em></li>
-                <li><strong>console.log(os.homedir());</strong></li>
-
-                <li><em>// Время работы системы</em></li>
-                <li><strong>console.log(os.uptime());</strong></li>
-
-                <li><em>// Символ окончания строки в данной системе</em></li>
-                <li><strong>console.log(os.EOL);</strong></li>
+            <li><strong>server.listen(PORT, 'localhost', () => {</strong></li>
+            <ul>
+              <li><strong>console.log(`Сервер запущен на порту ${PORT}`);</strong></li>
             </ul>
-        </article>
-        <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
-    </section>
+            <li><strong>});</strong></li>
+          </ul>
+        </ul>
+      </ul>
+    </article>
+    <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+  </section>
 
-    <section id="item8">
-        <h3>4.4. Модуль HTTP</h3>
-        <article>
-            <ul class="article">
-                В Node.js для работы с сервером и протоколом HTTP используется модуль http
-                <ul>
-                    <li><strong>const http = require('http');</strong></li>
-                    <li><strong>const PORT = 3000;</strong></li>
-                    <li><strong>const requestHandler = (request, response) => {</strong></li>
-                    <li><strong>const { method, url } = request;</strong></li>
-                    <li><strong>console.log(`Получен ${method}-запрос на ${url}`);</strong></li>
-                    <li><strong>response.write('Hello Node.js');</strong></li>
-                    <li><strong>response.end('Bye!');</strong></li>
-                    <li><strong>};</strong></li>
-                    <li><strong>const server = http.createServer(requestHandler);</strong></li>
-                    <li><strong>server.listen(PORT, 'localhost', () => {</strong></li>
-                    <li><strong>console.log(`Сервер запущен на порту ${PORT}`);</strong></li>
-                    <li><strong>});</strong></li>
-                </ul>
-                <li>Рассмотрим этот код.</li>
-                <li>Импортируем модуль http</li>
-                <ul>
-                    <li><strong>const http = require('http');</strong></li>
-                </ul>
-                <li>Используя его метод <em>createServer()</em>, создаем http-сервер:</li>
-                <ul>
-                    <li><strong>const requestHandler = (request, response) => {</strong></li>
-                    <li><strong>const { method, url } = request;</strong></li>
-                    <li><strong>console.log(`Получен ${method}-запрос на ${url}`);</strong></li>
-                    <li><strong>response.write('Hello Node.js');</strong></li>
-                    <li><strong>response.end('Bye!');</strong></li>
-                    <li><strong>};</strong></li>
+  <section id="item9">
+    <h3>5. События. Модуль Events</h3>
+    <article>
+      <ul class="article">
+        Модуль <em>Events</em> предназначен для работы с событиями.
 
-                    <li><strong>const server = http.createServer(requestHandler);</strong></li>
-                </ul>
+        Модуль Events позволяет создавать и генерировать свои собственные события.
 
-                В качестве колбэка данный метод получает функцию requestHandler с двумя параметрами <em>request</em> и
-                <em>response</em>
-                (имена могут быть любыми другими)
-                <ul>
-                    <li><em>request</em> хранит информацию о запросе</li>
-                    <li><em>response</em> отвечает за отправку ответа</li>
-                </ul>
-                <li>
-                    Наш <em>requestHandler</em> выводит в консоль метод запроса и адрес запрашиваемого ресурса, а также
-                    в ответ
-                    отправляет сообщения <em>Hello from Node.js</em> и <em>Bye!</em>.
-                </li>
-                <li>
-                    <ul>
-                        <li><strong>response.write()</strong></li>
-                    </ul>
-                    пишет в тело ответа сообщение, а <em>respone.end()</em>
-                    сообщает серверу, что заголовки и тело
-                    ответа записаны и его можно отправлять.
-                </li>
-                <li>
-                    <strong style="font-weight: 800; color: red">NB!</strong> <em>response.end()</em> должен завершать
-                    каждый ответ. Без этого обработка запроса "зависнет" — запрос будет
-                    получен, но не будет до конца обработан.
-                </li>
-                <li>
-                    Метод <em>listen</em> сервера запускает его и он начинает прослушивать определенный порт в ожидании
-                    соединений.
-                    Он имеет несколько сигнатур, в нашем случае он принимает три параметра: локальный порт, локальный
-                    адрес
-                    и колбэк-функцию, которая запускается при начале прослушивания подключений.
-                </li>
-                <ul>
-                    <li><strong>server.listen(PORT, 'localhost', () => {</strong></li>
-                    <li><strong>console.log(`Сервер запущен на порту ${PORT}`);</strong></li>
-                    <li><strong>});</strong></li>
-                </ul>
-                <ul>
-                    В методах <em>write</em> и <em>end</em> можно передать строку, которая содержит HTML-теги с инлайн
-                    стилями.
-                    Эти теги будут корректно обработаны браузером
-                    <ul>
+        Импортируем класс <em>EventEmitter</em> из модуля events
+        <ul>
+          <li><strong>const EventEmitter = require('events');</strong></li>
+        </ul>
+        Создадим экземпляр EventEmitter — объект emitter
+        <ul>
+          <li><strong>EventEmitter = require('events');</strong></li>
+          <li><strong>emitter = new EventEmitter();</strong></li>
+        </ul>
 
-                        <li><strong>const http = require('http');</strong></li>
+        У него есть два полезных метода:
+        <ul>
 
-                        <li><strong>const PORT = 3000;</strong></li>
+          <li><em>emit(&lt;event&gt;)</em> - генерирует событие event, заставляя срабатывать обработчики этого
+            события у подписчиков</li>
+          <li><em>on(&lt;event&gt;, &lt;handler&gt;)</em> - подписка на события (выполнение функции handler
+            действий при наступлении события event</li>
 
-                        <li><strong>const requestHandler = (request, response) => {</strong></li>
-                        <ul>
-                            <li><strong>const { method, url } = request;</strong></li>
-                            <li><strong>const heading = `&lt;h1 style="color: red"&gt;${url} page&lt;/h1&gt;`;</strong>
-                            </li>
-                            <li><strong>const content = `&lt;div style="background-color: green; width: 100px; height:
-                                    100px"&gt;Green block 100px x 100px&lt;/div&gt;`;</strong></li>
-                            <li><strong>console.log(`Получен ${method}-запрос на ${url}`);</strong></li>
-                            <li><strong>response.write(heading);</strong></li>
-                            <li><strong>response.end(content);</strong></li>
-                        </ul>
-                        <li><strong>};</strong></li>
+        </ul>
+        <li>У метода <em>on(&lt;event&gt;, &lt;handler&gt;)</em> два аргумента:</li>
+        <ul>
+          <li><em>event</em> - название события.</li>
+          <li><em>handler</em> - обработчик события (функция, которая сработает, когда событие произойдёт)
+          </li>
+        </ul>
+        <ul>
+          <li><strong>const EventEmitter = require('events');</strong></li>
+          <li><strong>const emitter = new EventEmitter();</strong></li>
+          <li><strong>emitter.on('start', () => console.log('Start'));</strong></li>
+        </ul>
+        Мы подписались на событие <em>'start'</em> для объекта <em>emitter</em>. Теперь нам нужно
+        сгенерировать это событие, чтобы сработал его обработчик Для этого вызываем метод
+        <em>emit()</em>, аргументом которого указываем название события
 
-                        <li><strong>const server = http.createServer(requestHandler);</strong></li>
+        <li>При вызове события в методе <em>emit()</em> можно передать какие-то дополнительные значения
+          (<em>payload</em>).
+          Эти значения будут переданы в качестве аргументов в функцию-обработчик</li>
+        <ul>
+          <li><strong>const EventEmitter = require('events');</strong></li>
+          <li><strong>const emitter = new EventEmitter();</strong></li>
+          <li><strong>emitter.on('start', (first, second) => console.log(`${first} and ${second}`));</strong>
+          </li>
+          <li><strong>emitter.emit('start', 1, 2); // 1 and 2</strong></li>
+        </ul>
+        <li>
+          При подписке на событие его обработчик ставится в очередь обработчиков. Одному и тому же событию
+          можно
+          назначить несколько обработчиков (по умолчанию не больше 10, но это не жесткий лимит). Обработчики
+          срабатывают в том порядке, в котором они были назначены:
+        </li>
+        Поставить назначенный позже обработчик в начало очереди нам поможет метод <em>prependListener</em>:
+        <ul>
+          <li><strong>emitter.on('start', handler1);</strong></li>
+          <li><strong>emitter.on('start', handler2);</strong></li>
+          <li><strong>emitter.on('start', handler3);</strong></li>
+          <li><strong>emitter.prependListener('start', handler4); </strong><em>// назначен позже, сработает
+              раньше</em></li>
+        </ul>
+        Если необходимо, чтобы обработчик срабатывал только один раз, для подписки используем метод once()
+        <ul>
+          <li><strong>EventEmitter = require('events');</strong></li>
+          <li><strong>emitter = new EventEmitter();</strong></li>
+          <li><strong>emitter.once('start', message => console.log(message));</strong></li>
+          <li><strong>emitter.emit('start', 'Hello');</strong><em>// сработает только для этого вызова</em>
+          </li>
+          <li><strong>emitter.emit('start', 'from');</strong></li>
+          <li><strong>emitter.emit('start', 'Node.js');</strong></li>
+        </ul>
 
-                        <li><strong>server.listen(PORT, 'localhost', () => {</strong></li>
-                        <ul>
-                            <li><strong>console.log(`Сервер запущен на порту ${PORT}`);</strong></li>
-                        </ul>
-                        <li><strong>});</strong></li>
-                    </ul>
-                </ul>
+        Удалить из очереди одну функцию-обработчик определенного события позволяет метод экземпляра EventEmitter
+        <em>off()</em> (или его алиас <em>removeListener</em>)
+        <ul>
+          <li><strong>emitter.off('start', handler);</strong> <em>// дальнейшие события не будут
+              обработаны</em></li>
+        </ul>
+
+        Иногда мы хотим, чтобы наш собственный класс имел API EventEmitter:
+        <ul>
+          <li><strong>const EventEmitter = require('events');</strong></li>
+          <li><strong>class User extends EventEmitter {</strong></li>
+          <ul style="border: none">
+            <li><strong>constructor(name, password) {</strong></li>
+            <ul style="border: none">
+              <li><strong>super();</strong></li>
+              <li><strong>this.name = name;</strong></li>
+              <li><strong>this.password = password;</strong></li>
             </ul>
-        </article>
-        <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
-    </section>
+            <li><strong>}</strong></li>
+            <li><strong>sayHi() {</strong></li>
+            <ul style="border: none">
+              <li><strong>console.log(`Hi! My name is ${this.name}`)</strong></li>
+            </ul>
+            <li><strong>}</strong></li>
+          </ul>
+          <li><strong>}</strong></li>
+          <li><strong>const user = new User('Vasya', 12345);</strong></li>
+          <li><strong>user.on('greetings', user.sayHi);</strong></li>
+          <li><strong>user.emit('greetings'); // Hi! My name is Vasya</strong></li>
+        </ul>
+      </ul>
+    </article>
+    <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+  </section>
 
-    <section id="item9">
-        <h3>5. События. Модуль Events</h3>
-        <article>
-            <ul class="article">
-                Модуль <em>Events</em> предназначен для работы с событиями.
+  <section id="item10">
+    <h3>6. Streams (потоки, стримы)</h3>
+    <article>
+      <ul class="article">
+        <li>
+          Если нам нужно работать с достаточно большим объёмом данных, работать с ним целиком означает загрузить
+          оперативную память и остановить работу программы на все время операции.
+        </li>
 
-                Модуль Events позволяет создавать и генерировать свои собственные события.
+        <li>
+          Вместо этого считывание и запись данных можно осуществлять по частям, небольшими фрагментами - чанками
+          (<em>chunk</em>). Это позволяет работать с очень большими объемами данных, не повышая объем потребляемой
+          памяти
+          пропорционально их размеру.
+        </li>
 
-                Импортируем класс <em>EventEmitter</em> из модуля events
-                <ul>
-                    <li><strong>const EventEmitter = require('events');</strong></li>
-                </ul>
-                Создадим экземпляр EventEmitter — объект emitter
-                <ul>
-                    <li><strong>EventEmitter = require('events');</strong></li>
-                    <li><strong>emitter = new EventEmitter();</strong></li>
-                </ul>
+        <li>Стримы используют интерфейс работы с событиями, унаследованный от EventEmitter.</li>
 
-                У него есть два полезных метода:
-                <ul>
+        <li>
+          Помимо использования готовых стримов, мы можем создавать свои собственные стримы, отнаследовавшись от
+          базовых классов и реализовав некоторые обязательные методы.
+        </li>
 
-                    <li><em>emit(&lt;event&gt;)</em> - генерирует событие event, заставляя срабатывать обработчики этого
-                        события у подписчиков</li>
-                    <li><em>on(&lt;event&gt;, &lt;handler&gt;)</em> - подписка на события (выполнение функции handler
-                        действий при наступлении события event</li>
+        <li>
+          Для работы с потоковыми данными в Node.js есть абстрактный интерфейс — <em>streams</em> (потоки, стримы).
+          В Node.js есть 4 основных вида потоков:
+        </li>
+        <ul>
+          <li><strong>Readable</strong> — поток чтения, используется для чтения данных</li>
+          <li><strong>Writable</strong> — поток записи, используется для записи данных</>
+          <li><strong>Duplex</strong> — поток, который может быть использован как для чтения, так и для записи данных
+          </li>
+          <li><strong>Transform</strong> — разновидность Duplex, используемая для преобразования данных</li>
+        </ul>
+      </ul>
+    </article>
+    <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+  </section>
 
-                </ul>
-                <li>У метода <em>on(&lt;event&gt;, &lt;handler&gt;)</em> два аргумента:</li>
-                <ul>
-                    <li><em>event</em> - название события.</li>
-                    <li><em>handler</em> - обработчик события (функция, которая сработает, когда событие произойдёт)
-                    </li>
-                </ul>
-                <ul>
-                    <li><strong>const EventEmitter = require('events');</strong></li>
-                    <li><strong>const emitter = new EventEmitter();</strong></li>
-                    <li><strong>emitter.on('start', () => console.log('Start'));</strong></li>
-                </ul>
-                Мы подписались на событие <em>'start'</em> для объекта <em>emitter</em>. Теперь нам нужно
-                сгенерировать это событие, чтобы сработал его обработчик Для этого вызываем метод
-                <em>emit()</em>, аргументом которого указываем название события
+  <section id="item11">
+    <h3>6.1. Поток чтения (Readable stream)</h3>
+    <article>
+      <ul class="article">
+        <li>
+          Поток чтения, как понятно из его названия, используется для чтения данных. Источником данных может быть что
+          угодно: ввод пользователя, файл, входящий запрос пользователя при обработке на сервере, другой поток,
+          асинхронный итератор и т.д.
+        </li>
 
-                <li>При вызове события в методе <em>emit()</em> можно передать какие-то дополнительные значения
-                    (<em>payload</em>).
-                    Эти значения будут переданы в качестве аргументов в функцию-обработчик</li>
-                <ul>
-                    <li><strong>const EventEmitter = require('events');</strong></li>
-                    <li><strong>const emitter = new EventEmitter();</strong></li>
-                    <li><strong>emitter.on('start', (first, second) => console.log(`${first} and ${second}`));</strong>
-                    </li>
-                    <li><strong>emitter.emit('start', 1, 2); // 1 and 2</strong></li>
-                </ul>
-                <li>
-                    При подписке на событие его обработчик ставится в очередь обработчиков. Одному и тому же событию
-                    можно
-                    назначить несколько обработчиков (по умолчанию не больше 10, но это не жесткий лимит). Обработчики
-                    срабатывают в том порядке, в котором они были назначены:
-                </li>
-                Поставить назначенный позже обработчик в начало очереди нам поможет метод <em>prependListener</em>:
-                <ul>
-                    <li><strong>emitter.on('start', handler1);</strong></li>
-                    <li><strong>emitter.on('start', handler2);</strong></li>
-                    <li><strong>emitter.on('start', handler3);</strong></li>
-                    <li><strong>emitter.prependListener('start', handler4); </strong><em>// назначен позже, сработает
-                            раньше</em></li>
-                </ul>
-                Если необходимо, чтобы обработчик срабатывал только один раз, для подписки используем метод once()
-                <ul>
-                    <li><strong>EventEmitter = require('events');</strong></li>
-                    <li><strong>emitter = new EventEmitter();</strong></li>
-                    <li><strong>emitter.once('start', message => console.log(message));</strong></li>
-                    <li><strong>emitter.emit('start', 'Hello');</strong><em>// сработает только для этого вызова</em>
-                    </li>
-                    <li><strong>emitter.emit('start', 'from');</strong></li>
-                    <li><strong>emitter.emit('start', 'Node.js');</strong></li>
-                </ul>
+        <li>
+          Для этого используем модуль fs, но вместо метода <em>readFile()</em> используем метод
+          <em>createReadStream()</em>,
+          параметром которого укажем название файла <em>source.txt</em>, из которого будем читать информацию.
+        </li>
+        <ul>
+          <li><strong>const fs = require('fs');</strong></li>
+          <li><strong>const readableStream = fs.createReadStream('source.txt');</strong></li>
+          <li><strong>readableStream.on('data', chunk => console.log(chunk));</strong></li>
+        </ul>
+        <li>
+          В консоли вместо текста объекты Buffer. Раньше эту проблему мы решали при помощи метода
+          <em>data.toString()</em>,
+          но преобразовать Buffer в строку можно и другим способом, указав вторым параметром метода
+          <em>createReadStream()</em> кодировку <em>'utf-8'</em>.
+        </li>
 
-                Удалить из очереди одну функцию-обработчик определенного события позволяет метод экземпляра EventEmitter
-                <em>off()</em> (или его алиас <em>removeListener</em>)
-                <ul>
-                    <li><strong>emitter.off('start', handler);</strong> <em>// дальнейшие события не будут
-                            обработаны</em></li>
-                </ul>
+        <li>Если файл с данными достаточно большой, они частями (чанками) размером 64кБ.</li>
 
-                Иногда мы хотим, чтобы наш собственный класс имел API EventEmitter:
-                <ul>
-                    <li><strong>const EventEmitter = require('events');</strong></li>
-                    <li><strong>class User extends EventEmitter {</strong></li>
-                    <ul style="border: none">
-                        <li><strong>constructor(name, password) {</strong></li>
-                        <ul style="border: none">
-                            <li><strong>super();</strong></li>
-                            <li><strong>this.name = name;</strong></li>
-                            <li><strong>this.password = password;</strong></li>
-                        </ul>
+        <li>
+          Чтобы все эти части собрать вместе, определим переменную datа. Её значением укажем пустую строку. Каждую
+          пришедшую часть данных будем присоединять к datа.
+        </li>
+        <ul>
+
+          <li><strong>let data = '';</strong></li>
+          <li><strong>stream.on('data', chunk => data += chunk);</strong></li>
+
+        </ul>
+
+        <li>
+          Так как мы имеем дело с потоком данных, нам нужно знать когда поток завершится. Для этого у стрима есть
+          событие
+          'end'. Это событие срабатывает когда все данные уже переданы.
+        </li>
+        <li>При наступлении события 'end' выведем в консоль сообщение и длину полученных данных:</li>
+
+        <ul>
+          <li><strong>stream.on('end', () => console.log('End', data.length));</strong></li>
+        </ul>
+
+        <li>
+          Обработаем возможную ошибку. При возникновении ошибки будет сгенерировано событие error. При наступлении
+          ошибки
+          выведем в консоль сообщение и текст ошибки. Чтобы вызвать ошибку, укажем несуществующее имя файла
+        </li>
+
+        <ul>
+          <li><strong>stream.on('error', error => console.log('Error', error.message));</strong></li>
+        </ul>
+
+      </ul>
+    </article>
+    <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+  </section>
+
+  <section id="item12">
+    <h3>6.2. Поток записи (Writable stream)</h3>
+    <article>
+      <ul class="article">
+        <li>
+          Поток записи, является противоположностью потока чтения. Он используется для записи данных. Записывать данные
+          можно, к примеру: в стандартный поток вывода, файл, response при обработке на сервере, другой поток и т.д.
+        </li>
+        <li>Если мы читаем данные по частям, логично записывать их тоже по частям.</li>
+        <li>Для этого создадим поток записи output:</li>
+        <ul>
+          <li><strong>const fs = require('fs');</strong></li>
+          <li><strong>const output = fs.createWriteStream('destination.txt');</strong></li>
+        </ul>
+        <li>
+          Если не создать файл, который указан в качестве пункта назначения наших данных, <em>destination.txt</em>, перед началом
+          записи он будет создан автоматически.
+          Поток чтения назовём <em>input</em> и каждую часть данных, которую он отдает, будем записывать в файл при помощи метода
+          <em>output.write()</em>.
+        </li>
+        <li>Сравните полученный код потока записи с кодом потока чтения - они создаются и используются сходным образом.</li>
+        <ul>
+          <li><strong>const fs = require('fs');</strong></li>
+          <li><strong>const input = fs.createReadStream('source.txt', 'utf-8');</strong></li>
+          <li><strong>const output = fs.createWriteStream('destination.txt');</strong></li>
+          <li><strong>input.on('data', chunk => output.write(chunk));</strong></li>
+          <li><strong>input.on('error', error => console.log('Error', error.message));</strong></li>
+        </ul>
+      </ul>
+    </article>
+    <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+  </section>
+
+  <section id="item13">
+    <h3>6.3. Объединение потоков чтения-записи</h3>
+    <article>
+      <ul class="article">
+        <li>
+          Код из предыдущей части можно сделать ещё проще и лучше:
+        </li>
+        <ul>
+          <li><strong>const fs = require('fs');</strong></li>
+          <li><strong>const input = fs.createReadStream('source.txt', 'utf-8');</strong></li>
+          <li><strong>const output = fs.createWriteStream('destination.txt');</strong></li>
+          <li><strong>input.pipe(output);</strong></li>
+        </ul>
+        <li>
+          Метод <em>pipe()</em>, имеющийся у каждого потока, можно использовать для объединения одних потоков с другими.
+          Такие цепочки могут объединять несколько потоков.
+        </li>
+        <li>Есть довольно удобный способ объединения нескольких потоков, позволяющий использовать один обработчик ошибок — функция <li>pipeline</li>:</li>
+        <ul>
+            <li><strong>const fs = require('fs');</strong></li>
+            <li><strong>const zlib = require('zlib');</strong></li>
+            <li><strong>const { pipeline } = require('stream');</strong></li>
+            <li><strong>const input = fs.createReadStream('source.txt', 'utf-8');</strong></li>
+            <li><strong>const output = fs.createWriteStream('destination.txt.gz');</strong></li>
+            <li><strong>const gzip = zlib.createGzip();</strong></li>
+            <li><strong>pipeline(</strong></li>
+              <ul>
+                  <li><strong>input,</strong></li>
+                  <li><strong>gzip,</strong></li>
+                  <li><strong>output,</strong></li>
+                  <li><strong>err => {</strong></li>
+                      <ul>
+                        <li><strong>if (err) {</strong></li>
+                            <ul><li><strong>// обрабатываем ошибки</strong></li></ul>
                         <li><strong>}</strong></li>
-                        <li><strong>sayHi() {</strong></li>
-                        <ul style="border: none">
-                            <li><strong>console.log(`Hi! My name is ${this.name}`)</strong></li>
-                        </ul>
-                        <li><strong>}</strong></li>
-                    </ul>
-                    <li><strong>}</strong></li>
-                    <li><strong>const user = new User('Vasya', 12345);</strong></li>
-                    <li><strong>user.on('greetings', user.sayHi);</strong></li>
-                    <li><strong>user.emit('greetings'); // Hi! My name is Vasya</strong></li>
-                </ul>
-            </ul>
-        </article>
-        <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
-    </section>
-
-    <section id="item10">
-        <h3>6. Streams (потоки, стримы)</h3>
-        <article>
-            <ul class="article">
-                <li>
-                    Если нам нужно работать с достаточно большим объёмом данных, работать с ним целиком означает загрузить
-                    оперативную память и остановить работу программы на все время операции.
-                </li>
-
-                <li>
-                    Вместо этого считывание и запись данных можно осуществлять по частям, небольшими фрагментами - чанками
-                    (<em>chunk</em>). Это позволяет работать с очень большими объемами данных, не повышая объем потребляемой памяти
-                    пропорционально их размеру.
-                </li>
-
-                <li>Стримы используют интерфейс работы с событиями, унаследованный от EventEmitter.</li>
-
-                <li>
-                    Помимо использования готовых стримов, мы можем создавать свои собственные стримы, отнаследовавшись от
-                    базовых классов и реализовав некоторые обязательные методы.
-                </li>
-
-                <li>
-                    Для работы с потоковыми данными в Node.js есть абстрактный интерфейс — <em>streams</em> (потоки, стримы).
-                    В Node.js есть 4 основных вида потоков:
-                </li>
-                <ul>
-    
-                    <li><strong>Readable</strong> — поток чтения, используется для чтения данных</li>
-                    <li><strong>Writable</strong> — поток записи, используется для записи данных</>
-                    <li><strong>Duplex</strong> — поток, который может быть использован как для чтения, так и для записи данных</li>
-                    <li><strong>Transform</strong> — разновидность Duplex, используемая для преобразования данных</li>
-                    
-                </ul>
-            </ul>
-        </article>
-        <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
-    </section>
+                      </ul>
+                  <li><strong>}</strong></li>
+              </ul>
+            <li><strong>);</strong></li>
+        </ul>
+      </ul>
+    </article>
+    <span><a class="gototop" href="#top-of-page">К оглавлению</a></span>
+  </section>
 </body>
